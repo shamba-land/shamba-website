@@ -198,7 +198,7 @@ export default function Home() {
                 Be Among the First to Transform Farmer Support
               </h2>
               <p className="text-lg text-muted-foreground mb-10 md:text-xl">
-                We're building the future of smallholder farmer management. Join our waitlist to get early access and help shape the platform.
+                We're building the future of smallholder farmer management. Request early access and help shape the platform.
               </p>
               <WaitlistForm />
               <div className="mt-6 text-center">

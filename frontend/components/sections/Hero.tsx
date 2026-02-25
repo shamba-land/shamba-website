@@ -45,14 +45,14 @@ export function Hero() {
 
             <p className="text-lg text-white/90 md:text-xl">
               We're building powerful, location-aware tools to help local
-              organizations support smallholder farmers effectively. Join our waitlist for early access.
+              organizations support smallholder farmers effectively.
             </p>
           </div>
 
           {/* Right side - Buttons */}
           <div className="flex flex-col gap-4 md:flex-row md:items-end">
             <Button size="lg" className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90" asChild>
-              <a href="#contact">Join Waitlist</a>
+              <a href="#contact">Request Access</a>
             </Button>
             <Button
               size="lg"

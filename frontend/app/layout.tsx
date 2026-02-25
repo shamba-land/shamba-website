@@ -17,15 +17,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shamba - Geospatial CRM for Smallholder Farmers | Farm Management Software",
-  description: "Shamba is a geospatial CRM platform helping organizations manage smallholder farmers with mapping, mobile data collection, and agricultural program management tools.",
-  keywords: ["smallholder farmer CRM", "agricultural CRM", "farm management software", "geospatial mapping", "farmer relationship management", "mobile data collection", "agricultural program management", "field organization tools"],
+  title: "Shamba | Agricultural Data Platform",
+  description: "Shamba is a geospatial CRM platform for managing smallholder farmers with offline-first mobile data collection, GPS boundary mapping, and program management.",
+  keywords: [
+    "smallholder farmer CRM",
+    "agricultural CRM",
+    "farm management software",
+    "geospatial mapping",
+    "farmer relationship management",
+    "mobile data collection",
+    "agricultural program management",
+    "field organization tools",
+    "KoboToolbox alternative",
+    "SurveyCTO alternative",
+    "ODK alternative",
+    "getODK alternative",
+    "offline data collection",
+    "GPS farm mapping",
+    "field boundary mapping",
+    "agricultural survey tool",
+    "farmer enrollment platform",
+    "smallholder farm management",
+  ],
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
+    shortcut: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
@@ -54,7 +74,7 @@ const jsonLd = {
   "@type": "SoftwareApplication",
   name: "Shamba",
   applicationCategory: "BusinessApplication",
-  operatingSystem: "Web",
+  operatingSystem: "Web, Android, iOS",
   description: "Geospatial CRM platform for organizations supporting smallholder farmers with mapping, mobile data collection, and agricultural program management tools.",
   url: "https://shamba.land",
   author: {
@@ -66,6 +86,7 @@ const jsonLd = {
     "@type": "Offer",
     availability: "https://schema.org/ComingSoon",
   },
+  keywords: "KoboToolbox alternative, SurveyCTO alternative, ODK alternative, smallholder farmer CRM, agricultural data collection, GPS farm mapping",
 };
 
 export default function RootLayout({
