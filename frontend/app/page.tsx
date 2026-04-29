@@ -198,12 +198,12 @@ export default function Home() {
                 Be Among the First to Transform Farmer Support
               </h2>
               <p className="text-lg text-muted-foreground mb-10 md:text-xl">
-                We're building the future of smallholder farmer management. Request early access and help shape the platform.
+                We&apos;re building the future of smallholder farmer management. Request early access and help shape the platform.
               </p>
               <WaitlistForm />
               <div className="mt-6 text-center">
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-secondary/10 border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-foreground" asChild>
-                  <a href="mailto:info@shamba.land">Contact Us</a>
+                  <a href="mailto:info@shamba.land">Request a demo</a>
                 </Button>
               </div>
             </div>

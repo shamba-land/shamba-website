@@ -112,7 +112,7 @@ export async function getPage(slug: string) {
       return null;
     }
 
-    const result: StrapiResponse<any[]> = await response.json();
+    const result: StrapiResponse<Record<string, unknown>[]> = await response.json();
     return result.data?.[0] || null;
   } catch (error) {
     console.error(`Error fetching page ${slug}:`, error);

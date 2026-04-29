@@ -943,7 +943,7 @@ export function ProductShowcase() {
                 Field-Ready Data Collection
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
-                Work offline in remote areas with our mobile app. Capture data, photos, and GPS coordinates, then sync when you're back online.
+                Work offline in remote areas with our mobile app. Capture data, photos, and GPS coordinates, then sync when you&apos;re back online.
               </p>
 
               {/* Features - consistent blue styling */}

@@ -82,10 +82,10 @@ export function Header() {
           {isScrolled ? (
             <>
               <Button variant="outline" asChild className="hidden md:inline-flex hover:bg-primary/10 hover:text-primary">
-                <a href="#contact">Contact Us</a>
+                <a href="#contact">Request a demo</a>
               </Button>
               <Button asChild>
-                <a href="#contact">Get Started</a>
+                <a href="https://app.shamba.land" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
             </>
           ) : (
@@ -95,10 +95,10 @@ export function Header() {
                 asChild
                 className="hidden md:inline-flex bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white"
               >
-                <a href="#contact">Contact Us</a>
+                <a href="#contact">Request a demo</a>
               </Button>
               <Button asChild className="bg-white text-primary hover:bg-white/90">
-                <a href="#contact">Get Started</a>
+                <a href="https://app.shamba.land" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
             </>
           )}

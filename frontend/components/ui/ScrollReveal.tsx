@@ -12,17 +12,26 @@ export function ScrollReveal({ children, delay = 0, className = "" }: ScrollReve
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(true);
+  const initialCheckDone = useRef(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    // If element is already in viewport on mount, show immediately without animation
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      setShouldAnimate(false);
-      setIsVisible(true);
-      return;
+    // If element is already in viewport on mount, show immediately without animation.
+    // We use IntersectionObserver with threshold 0 for the initial check to avoid
+    // calling setState synchronously within the effect body.
+    if (!initialCheckDone.current) {
+      initialCheckDone.current = true;
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        // Already in viewport -- use a microtask to set state outside the synchronous effect body
+        queueMicrotask(() => {
+          setShouldAnimate(false);
+          setIsVisible(true);
+        });
+        return;
+      }
     }
 
     const observer = new IntersectionObserver(

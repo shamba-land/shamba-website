@@ -44,7 +44,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-white/90 md:text-xl">
-              We're building powerful, location-aware tools to help local
+              We&apos;re building powerful, location-aware tools to help local
               organizations support smallholder farmers effectively.
             </p>
           </div>
