@@ -43,7 +43,7 @@ export function Hero() {
           {/* Right side - Buttons */}
           <div className="flex flex-col gap-4 md:flex-row md:items-end">
             <Button size="lg" className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90" asChild>
-              <a href="#contact">Request Access</a>
+              <a href="https://app.shamba.land/signup" target="_blank" rel="noopener noreferrer">Request Access</a>
             </Button>
             <Button
               size="lg"
