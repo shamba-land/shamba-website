@@ -191,14 +191,12 @@ export default function Home() {
 
           <div className="container relative">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-6 inline-flex items-center rounded-full border border-blue-light/40 px-4 py-1.5">
-                <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">Coming Soon</span>
-              </div>
               <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-                Be Among the First to Transform Farmer Support
+                Built for organizations supporting smallholder farmers
               </h2>
               <p className="text-lg text-muted-foreground mb-10 md:text-xl">
-                We&apos;re building the future of smallholder farmer management. Request early access and help shape the platform.
+                A geospatial CRM purpose-built for farmer programs.
+                Request a demo to see it in action.
               </p>
               <WaitlistForm />
               <div className="mt-6 text-center">

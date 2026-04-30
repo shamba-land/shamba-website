@@ -27,15 +27,6 @@ export function Hero() {
         <div className="flex w-full flex-col md:flex-row md:items-end md:justify-between gap-8">
           {/* Left side - Text content */}
           <div className="flex flex-col max-w-2xl">
-            {/* Badge */}
-            <div className="mb-8">
-              <div className="inline-flex items-center rounded-full border border-white/50 px-4 py-1.5">
-                <span className="text-xs font-semibold text-white uppercase tracking-wider">
-                  Coming Soon
-                </span>
-              </div>
-            </div>
-
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
               Geospatial CRM for{" "}
               <span className="text-white/90">
@@ -44,8 +35,8 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-white/90 md:text-xl">
-              We&apos;re building powerful, location-aware tools to help local
-              organizations support smallholder farmers effectively.
+              Location-aware tools that help organizations support
+              smallholder farmers at scale.
             </p>
           </div>
 

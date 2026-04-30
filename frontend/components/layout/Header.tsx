@@ -86,9 +86,12 @@ export function Header() {
               </Button>
               {/* Desktop: Open the live app. Mobile: surface a demo CTA
                   instead — sending mobile visitors straight into the app
-                  without context tends to feel jarring. */}
+                  without context tends to feel jarring. The /signup
+                  deeplink lands unauthenticated visitors on the signup
+                  flow; the app's auth guard sends already-signed-in
+                  users to their home. */}
               <Button asChild className="hidden md:inline-flex">
-                <a href="https://app.shamba.land" target="_blank" rel="noopener noreferrer">Sign Up</a>
+                <a href="https://app.shamba.land/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
               <Button asChild className="md:hidden">
                 <a href="#contact">Request Demo</a>
@@ -104,7 +107,7 @@ export function Header() {
                 <a href="#contact">Contact us</a>
               </Button>
               <Button asChild className="hidden md:inline-flex bg-white text-primary hover:bg-white/90">
-                <a href="https://app.shamba.land" target="_blank" rel="noopener noreferrer">Sign Up</a>
+                <a href="https://app.shamba.land/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
               <Button asChild className="md:hidden bg-white text-primary hover:bg-white/90">
                 <a href="#contact">Request Demo</a>

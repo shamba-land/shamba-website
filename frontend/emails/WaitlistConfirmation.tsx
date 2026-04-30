@@ -27,8 +27,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
         <meta name="supported-color-schemes" content="light" />
       </Head>
       <Preview>
-        Welcome to the Shamba.land waitlist — we&apos;re building something
-        special for smallholder farmer support.
+        Welcome to Shamba.land. Thanks for joining the waitlist.
       </Preview>
       <Body
         style={{
@@ -61,7 +60,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
               margin: "0 0 20px",
             }}
           >
-            You&apos;re on the list!
+            Welcome aboard.
           </Heading>
 
           <Text
@@ -72,8 +71,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
               margin: "0 0 16px",
             }}
           >
-            Thank you for your interest in Shamba.land. We&apos;re excited to
-            have you on board.
+            Thanks for your interest in Shamba.land.
           </Text>
 
           <Text
@@ -88,7 +86,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
             <strong style={{ color: "#1F3D2B" }}>{email}</strong>.
           </Text>
 
-          {/* What we're building */}
+          {/* About the product */}
           <Section
             style={{
               padding: "24px",
@@ -106,7 +104,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
                 margin: "0 0 12px",
               }}
             >
-              What we&apos;re building
+              About Shamba
             </Text>
             <Text
               style={{
@@ -116,10 +114,8 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
                 margin: "0 0 16px",
               }}
             >
-              Shamba.land is a geospatial CRM designed specifically for
-              organizations that support smallholder farmers. We&apos;re
-              currently in active development, building a platform that
-              combines:
+              Shamba.land is a geospatial CRM for organizations that
+              support smallholder farmers. The platform combines:
             </Text>
             <Text
               style={{
@@ -165,7 +161,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
                 margin: "0 0 12px",
               }}
             >
-              Where we are now
+              Working with us
             </Text>
             <Text
               style={{
@@ -175,11 +171,10 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
                 margin: 0,
               }}
             >
-              We&apos;re a small team actively developing the platform. As an
-              early waitlist member, you&apos;ll be among the first to get
-              access when we launch. We&apos;ll send you occasional updates on
-              our progress and invite you to provide feedback that will directly
-              shape the product.
+              We onboard organizations as design partners. You&apos;ll
+              receive periodic product updates and an invitation to
+              schedule a walkthrough when there&apos;s a fit with your
+              programs.
             </Text>
           </Section>
 
@@ -212,13 +207,11 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
                 paddingLeft: "8px",
               }}
             >
-              &bull; Priority early access when we launch
+              &bull; Priority access to new releases
               <br />
-              &bull; Periodic development updates (no spam)
+              &bull; Periodic product updates
               <br />
-              &bull; Opportunity to provide input on features
-              <br />
-              &bull; Special pricing for early supporters
+              &bull; Preferred pricing for design partners
             </Text>
           </Section>
 

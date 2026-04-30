@@ -158,7 +158,7 @@ export function Products() {
         {/* CTA */}
         <div className="text-center">
           <Button size="lg" asChild>
-            <a href="#contact">Request Early Access</a>
+            <a href="#contact">Request a Demo</a>
           </Button>
         </div>
       </div>
