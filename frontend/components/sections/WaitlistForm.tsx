@@ -62,9 +62,6 @@ export function WaitlistForm() {
       {state?.success === false && (
         <p className="mt-2 text-sm text-destructive">{state.message}</p>
       )}
-      <p className="mt-3 text-xs text-muted-foreground text-center">
-        No spam, ever. We&apos;ll only email you about Shamba.land updates.
-      </p>
     </div>
   );
 }
