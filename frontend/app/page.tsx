@@ -203,7 +203,7 @@ export default function Home() {
               <WaitlistForm />
               <div className="mt-6 text-center">
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-secondary/10 border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-foreground" asChild>
-                  <a href="mailto:info@shamba.land">Request a demo</a>
+                  <a href="mailto:info@shamba.land">Contact us</a>
                 </Button>
               </div>
             </div>

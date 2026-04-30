@@ -56,7 +56,7 @@ export function WaitlistForm() {
           className="text-base px-8 py-4 h-auto whitespace-nowrap"
           disabled={isPending}
         >
-          {isPending ? "Joining..." : "Join Waitlist"}
+          {isPending ? "Sending..." : "Request Demo"}
         </Button>
       </form>
       {state?.success === false && (

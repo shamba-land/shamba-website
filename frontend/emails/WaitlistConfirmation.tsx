@@ -19,7 +19,13 @@ interface WaitlistConfirmationProps {
 export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
   return (
     <Html>
-      <Head />
+      {/* Opt out of mail-client auto-invert in dark mode. iOS Mail,
+          Apple Mail, Outlook iOS honor `color-scheme: light only`;
+          without it they re-paint our warm palette as muddy darks. */}
+      <Head>
+        <meta name="color-scheme" content="light only" />
+        <meta name="supported-color-schemes" content="light" />
+      </Head>
       <Preview>
         Welcome to the Shamba.land waitlist — we&apos;re building something
         special for smallholder farmer support.
