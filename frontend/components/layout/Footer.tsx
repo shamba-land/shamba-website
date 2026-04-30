@@ -78,7 +78,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Shamba.land. All rights reserved.
+            &copy; {new Date().getFullYear()} Shamba B.V. All rights reserved.
           </p>
           <a
             href="https://github.com/shamba-land"

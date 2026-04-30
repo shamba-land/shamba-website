@@ -251,7 +251,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
               margin: 0,
             }}
           >
-            &copy; {new Date().getFullYear()} Shamba.land. All rights reserved.
+            &copy; {new Date().getFullYear()} Shamba B.V. All rights reserved.
             <br />
             You&apos;re receiving this because you signed up for the waitlist at{" "}
             <Link
