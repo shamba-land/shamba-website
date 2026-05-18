@@ -889,7 +889,7 @@ export function ProductShowcase() {
                       <div className="w-3 h-3 rounded-full bg-green-400/60" />
                     </div>
                     <div className="flex-1 mx-4 bg-background/50 rounded px-3 py-1 text-xs text-muted-foreground">
-                      app.shamba.land/dashboard
+                      platform.shamba.land/dashboard
                     </div>
                   </div>
 
