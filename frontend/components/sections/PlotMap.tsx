@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import { Plus, Minus, Home } from "lucide-react";
 import "maplibre-gl/dist/maplibre-gl.css";
 
 type Ring = [number, number][];
@@ -27,12 +28,31 @@ function convexHull(points: [number, number][]): [number, number][] {
   return lower.slice(0, -1).concat(upper.slice(0, -1));
 }
 
+// Mirrors the real product's map controls
+// (app: shared/layouts/map-controls/MapControlButtons.tsx) — a white
+// rounded icon button, soft shadow, brand-green on hover. Soft shadow on
+// purpose (the app uses shadow-md), not the site's hard-shadow button.
+function MapButton({ onClick, label, children }: { onClick: () => void; label: string; children: ReactNode }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={label}
+      title={label}
+      className="flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card text-foreground shadow-md transition-colors hover:bg-muted hover:text-primary"
+    >
+      {children}
+    </button>
+  );
+}
+
 export default function PlotMap({ className = "" }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<import("maplibre-gl").Map | null>(null);
+  const boundsRef = useRef<[[number, number], [number, number]] | null>(null);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    let map: import("maplibre-gl").Map | undefined;
     let cancelled = false;
 
     (async () => {
@@ -57,6 +77,7 @@ export default function PlotMap({ className = "" }: { className?: string }) {
           [Math.min(...lons), Math.min(...lats)],
           [Math.max(...lons), Math.max(...lats)],
         ];
+        boundsRef.current = bounds;
         const hull = convexHull(verts);
 
         // Real satellite basemap once a MapTiler key is set; until then a
@@ -67,7 +88,7 @@ export default function PlotMap({ className = "" }: { className?: string }) {
           ? `https://api.maptiler.com/maps/satellite/style.json?key=${key}`
           : null;
 
-        map = new maplibregl.Map({
+        const map = new maplibregl.Map({
           container: containerRef.current,
           style:
             realStyle ?? {
@@ -83,11 +104,12 @@ export default function PlotMap({ className = "" }: { className?: string }) {
           dragRotate: false,
           maxZoom: 17,
         });
-        map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
-        map.scrollZoom.disable(); // don't hijack page scroll; pan + buttons stay live
+        mapRef.current = map;
+        // Custom React controls (below) mirror the product; no default chrome.
+        // Keep pan live but don't hijack page scroll.
+        map.scrollZoom.disable();
 
         map.on("load", () => {
-          if (!map) return;
           map.addSource("plots", { type: "geojson", data });
           // Operating-area hull (subtle fill + dashed outline)
           if (hull.length >= 3) {
@@ -110,7 +132,8 @@ export default function PlotMap({ className = "" }: { className?: string }) {
 
     return () => {
       cancelled = true;
-      map?.remove();
+      mapRef.current?.remove();
+      mapRef.current = null;
     };
   }, []);
 
@@ -122,5 +145,20 @@ export default function PlotMap({ className = "" }: { className?: string }) {
     );
   }
 
-  return <div ref={containerRef} className={className} aria-label="Interactive map of a cooperative's mapped plots" role="img" />;
+  const zoomIn = () => mapRef.current?.zoomIn();
+  const zoomOut = () => mapRef.current?.zoomOut();
+  const fitPlots = () => {
+    if (boundsRef.current) mapRef.current?.fitBounds(boundsRef.current, { padding: 36 });
+  };
+
+  return (
+    <>
+      <div ref={containerRef} className={className} aria-label="Interactive map of a cooperative's mapped plots" role="img" />
+      <div className="absolute right-3 top-14 z-10 flex flex-col gap-2">
+        <MapButton onClick={zoomIn} label="Zoom in"><Plus className="h-5 w-5" /></MapButton>
+        <MapButton onClick={zoomOut} label="Zoom out"><Minus className="h-5 w-5" /></MapButton>
+        <MapButton onClick={fitPlots} label="Zoom to plots"><Home className="h-5 w-5" /></MapButton>
+      </div>
+    </>
+  );
 }
