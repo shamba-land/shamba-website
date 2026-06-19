@@ -85,7 +85,7 @@ export function Header() {
                 <a href="#contact">Contact us</a>
               </Button>
               {/* Desktop: Open the live app. Mobile: surface a demo CTA
-                  instead — sending mobile visitors straight into the app
+                  instead, sending mobile visitors straight into the app
                   without context tends to feel jarring. The /signup
                   deeplink lands unauthenticated visitors on the signup
                   flow; the app's auth guard sends already-signed-in

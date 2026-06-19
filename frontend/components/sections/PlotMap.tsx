@@ -59,18 +59,27 @@ export default function PlotMap({ className = "" }: { className?: string }) {
         ];
         const hull = convexHull(verts);
 
+        // Real satellite basemap once a MapTiler key is set; until then a
+        // self-contained green canvas (no external tiles, no key) so the map
+        // still renders. Set NEXT_PUBLIC_MAPTILER_KEY to switch it on.
+        const key = process.env.NEXT_PUBLIC_MAPTILER_KEY;
+        const realStyle = key
+          ? `https://api.maptiler.com/maps/satellite/style.json?key=${key}`
+          : null;
+
         map = new maplibregl.Map({
           container: containerRef.current,
-          // Self-contained style: no external tiles, no API key. A deep
-          // green base evokes a satellite field view; the plots are the focus.
-          style: {
-            version: 8,
-            sources: {},
-            layers: [{ id: "bg", type: "background", paint: { "background-color": "#13251a" } }],
-          },
+          style:
+            realStyle ?? {
+              version: 8,
+              sources: {},
+              layers: [{ id: "bg", type: "background", paint: { "background-color": "#13251a" } }],
+            },
           bounds,
           fitBoundsOptions: { padding: 36 },
-          attributionControl: false,
+          // Provider basemaps require attribution (pass options to enable);
+          // the green fallback needs none (false to disable).
+          attributionControl: realStyle ? {} : false,
           dragRotate: false,
           maxZoom: 17,
         });

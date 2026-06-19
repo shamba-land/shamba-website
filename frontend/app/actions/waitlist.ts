@@ -7,7 +7,7 @@ import { WaitlistConfirmation } from "@/emails/WaitlistConfirmation";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// HubSpot is optional — if the token isn't set the demo-request still
+// HubSpot is optional, if the token isn't set the demo-request still
 // lands in Resend + email. Lifecycle / lead-status / segmentation are
 // owned by HubSpot CRM workflows downstream; we only write the
 // standard `email` property here.
@@ -50,7 +50,7 @@ export async function joinWaitlist(
     });
 
     // Mirror to HubSpot CRM as a Contact. Standard `email` property
-    // only — no lifecyclestage / hs_lead_status / custom-tag writes
+    // only, no lifecyclestage / hs_lead_status / custom-tag writes
     // from here. HubSpot workflows pick the contact up and own
     // lifecycle from there. Best-effort: a HubSpot outage shouldn't
     // block the user-facing flow.
@@ -62,7 +62,7 @@ export async function joinWaitlist(
         });
       } catch (hubspotError) {
         // Common case: the contact already exists (409). Surface in
-        // logs but don't fail the request — Resend has the record,
+        // logs but don't fail the request, Resend has the record,
         // HubSpot can de-dupe later.
         console.warn("HubSpot contact create failed:", hubspotError);
       }
