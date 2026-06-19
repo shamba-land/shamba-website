@@ -80,27 +80,37 @@ export default function PlotMap({ className = "" }: { className?: string }) {
         boundsRef.current = bounds;
         const hull = convexHull(verts);
 
-        // Real satellite basemap once a MapTiler key is set; until then a
-        // self-contained green canvas (no external tiles, no key) so the map
-        // still renders. Set NEXT_PUBLIC_MAPTILER_KEY to switch it on.
-        const key = process.env.NEXT_PUBLIC_MAPTILER_KEY;
-        const realStyle = key
-          ? `https://api.maptiler.com/maps/satellite/style.json?key=${key}`
-          : null;
-
+        // Esri World Imagery satellite basemap — the same imagery family the
+        // app uses. Keyless raster tiles by default (light demo use, with
+        // attribution); set NEXT_PUBLIC_ARCGIS_API_KEY to use Esri's licensed
+        // basemap-styles (officially MapLibre-supported) instead.
+        const arcgisKey = process.env.NEXT_PUBLIC_ARCGIS_API_KEY;
         const map = new maplibregl.Map({
           container: containerRef.current,
-          style:
-            realStyle ?? {
-              version: 8,
-              sources: {},
-              layers: [{ id: "bg", type: "background", paint: { "background-color": "#13251a" } }],
-            },
+          style: arcgisKey
+            ? `https://basemapstyles-api.arcgis.com/arcgis/rest/services/styles/v2/styles/arcgis/imagery?token=${arcgisKey}`
+            : {
+                version: 8,
+                sources: {
+                  "esri-imagery": {
+                    type: "raster",
+                    tiles: [
+                      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                    ],
+                    tileSize: 256,
+                    attribution: "Imagery © Esri, Maxar, Earthstar Geographics, and the GIS User Community",
+                  },
+                },
+                // Dark fill under the raster so any un-loaded tile reads as
+                // deep field tone rather than flashing white.
+                layers: [
+                  { id: "bg", type: "background", paint: { "background-color": "#0b1410" } },
+                  { id: "esri-imagery", type: "raster", source: "esri-imagery" },
+                ],
+              },
           bounds,
           fitBoundsOptions: { padding: 36 },
-          // Provider basemaps require attribution (pass options to enable);
-          // the green fallback needs none (false to disable).
-          attributionControl: realStyle ? {} : false,
+          attributionControl: { compact: true }, // Esri imagery requires attribution
           dragRotate: false,
           maxZoom: 17,
         });
