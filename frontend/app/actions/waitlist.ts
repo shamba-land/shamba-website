@@ -86,7 +86,7 @@ export async function joinWaitlist(
 
     return {
       success: true,
-      message: "Thanks — we'll be in touch shortly.",
+      message: "Thanks, we'll be in touch shortly.",
     };
   } catch (error) {
     console.error("Demo request error:", error);

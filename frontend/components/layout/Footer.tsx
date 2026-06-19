@@ -23,7 +23,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Empowering smallholder farmers through geospatial CRM technology.
+              The platform for organizations that support smallholder farmers.
             </p>
           </div>
 
@@ -33,10 +33,10 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="#products"
+                  href="#solutions"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  Products
+                  Who it&apos;s for
                 </a>
               </li>
               <li>
@@ -49,10 +49,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#features"
+                  href="#benefits"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  Features
+                  Benefits
                 </a>
               </li>
             </ul>

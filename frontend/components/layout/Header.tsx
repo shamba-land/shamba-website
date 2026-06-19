@@ -12,9 +12,9 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const navItems = [
-  { label: "Products", href: "#products" },
+  { label: "Who it's for", href: "#solutions" },
   { label: "Platform", href: "#platform" },
-  { label: "Features", href: "#features" },
+  { label: "Benefits", href: "#benefits" },
 ];
 
 export function Header() {
