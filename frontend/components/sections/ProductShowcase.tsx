@@ -789,11 +789,11 @@ export function ProductShowcase() {
             <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">Platform Overview</span>
           </div>
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-            Desktop Power,{" "}
-            <span className="text-primary">Mobile Flexibility</span>
+            Your team in the office{" "}
+            <span className="text-primary">and in the field</span>
           </h2>
           <p className="text-lg text-muted-foreground md:text-xl">
-            Access your farmer data anywhere with our comprehensive web platform and offline-capable mobile app
+            Coordinate your programs from the web, and collect data in the field offline, working from the same records.
           </p>
         </div>
 
@@ -803,13 +803,13 @@ export function ProductShowcase() {
             {/* Content */}
             <ScrollReveal className="order-2 lg:order-1">
               <div className="mb-4 inline-flex items-center rounded-full border border-blue-light/40 px-3 py-1.5">
-                <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">Web Platform</span>
+                <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">In the office</span>
               </div>
               <h3 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
-                Powerful Command Center
+                Run everything from one place
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
-                Manage your entire farmer network from our intuitive web dashboard. Visualize data on interactive maps, generate insights, and coordinate field operations.
+                Manage your whole farmer network from one dashboard: see farmers and plots on a map, track your programs, and coordinate the field team.
               </p>
 
               {/* Features - consistent blue styling */}
@@ -829,8 +829,8 @@ export function ProductShowcase() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Interactive Geospatial Maps</h4>
-                    <p className="text-sm text-muted-foreground">View farmer locations, field boundaries, and regional analytics with multiple map layers</p>
+                    <h4 className="font-semibold mb-1">Farmers and plots on a map</h4>
+                    <p className="text-sm text-muted-foreground">See farmer locations, field boundaries, and regional analytics across your programs</p>
                   </div>
                 </button>
 
@@ -849,8 +849,8 @@ export function ProductShowcase() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Advanced Analytics Dashboard</h4>
-                    <p className="text-sm text-muted-foreground">Real-time insights, custom reports, and trend analysis across your programs</p>
+                    <h4 className="font-semibold mb-1">Reporting you can act on</h4>
+                    <p className="text-sm text-muted-foreground">Live insights, custom reports, and trends to share with your team and your funders</p>
                   </div>
                 </button>
 
@@ -869,8 +869,8 @@ export function ProductShowcase() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Team Collaboration Tools</h4>
-                    <p className="text-sm text-muted-foreground">Role-based access, task assignment, and communication features for field teams</p>
+                    <h4 className="font-semibold mb-1">Coordinate your whole team</h4>
+                    <p className="text-sm text-muted-foreground">Role-based access, task assignment, and a shared view for office and field staff</p>
                   </div>
                 </button>
               </div>
@@ -937,13 +937,13 @@ export function ProductShowcase() {
             {/* Content */}
             <ScrollReveal delay={200}>
               <div className="mb-4 inline-flex items-center rounded-full border border-blue-light/40 px-3 py-1.5">
-                <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">Mobile App</span>
+                <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">In the field</span>
               </div>
               <h3 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
-                Field-Ready Data Collection
+                Built for the field, online or not
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
-                Work offline in remote areas with our mobile app. Capture data, photos, and GPS coordinates, then sync when you&apos;re back online.
+                Field teams register farmers, run surveys, and map plots on a simple mobile app, then it syncs automatically when they are back online.
               </p>
 
               {/* Features - consistent blue styling */}
@@ -963,8 +963,8 @@ export function ProductShowcase() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Offline-First Architecture</h4>
-                    <p className="text-sm text-muted-foreground">Collect data without internet, automatically sync when connected</p>
+                    <h4 className="font-semibold mb-1">Works offline, syncs later</h4>
+                    <p className="text-sm text-muted-foreground">Collect data with no connection, and it syncs automatically once you are back online</p>
                   </div>
                 </button>
 
@@ -983,7 +983,7 @@ export function ProductShowcase() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Geometry Collection</h4>
+                    <h4 className="font-semibold mb-1">Map plots on the ground</h4>
                     <p className="text-sm text-muted-foreground">Draw field boundaries, mark plot locations, and measure areas with GPS precision</p>
                   </div>
                 </button>
@@ -1003,7 +1003,7 @@ export function ProductShowcase() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Satellite Imagery Backgrounds</h4>
+                    <h4 className="font-semibold mb-1">Find your way with satellite maps</h4>
                     <p className="text-sm text-muted-foreground">Navigate with cached satellite maps even without connectivity</p>
                   </div>
                 </button>

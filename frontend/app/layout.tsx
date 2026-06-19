@@ -17,9 +17,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shamba | Agricultural Data Platform",
-  description: "Shamba is a geospatial CRM platform for managing smallholder farmers with offline-first mobile data collection, GPS boundary mapping, and program management.",
+  title: "Shamba | Putting smallholders on the map",
+  description: "Shamba helps cooperatives, NGOs, and sustainability programs register farmers, map their land, run field operations offline, and prove impact and compliance, in one place.",
   keywords: [
+    // Use-case terms (how customers describe their problem)
+    "EUDR compliance software",
+    "farmer traceability",
+    "deforestation-free sourcing",
+    "cooperative management software",
+    "farmer registration platform",
+    "input distribution tracking",
+    "agricultural certification software",
+    "smallholder impact reporting",
+    // Long-tail / category search terms (invisible SEO, not used in copy)
     "smallholder farmer CRM",
     "agricultural CRM",
     "farm management software",
@@ -51,8 +61,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Shamba - Geospatial CRM for Smallholder Farmers",
-    description: "Powerful geospatial CRM platform for organizations supporting smallholder farmers. Mapping, mobile data collection, and agricultural program management.",
+    title: "Shamba - Putting smallholders on the map",
+    description: "The platform for organizations that support smallholder farmers. Register farmers, map their land, run field operations offline, and prove impact and compliance, in one place.",
     url: "https://shamba.land",
     siteName: "Shamba",
     locale: "en_US",
@@ -60,8 +70,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shamba - Geospatial CRM for Smallholder Farmers",
-    description: "Powerful geospatial CRM platform for organizations supporting smallholder farmers.",
+    title: "Shamba - Putting smallholders on the map",
+    description: "The platform for organizations that support smallholder farmers. Register farmers, map their land, and prove impact, in one place.",
   },
   robots: {
     index: true,
@@ -75,7 +85,7 @@ const jsonLd = {
   name: "Shamba",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web, Android, iOS",
-  description: "Geospatial CRM platform for organizations supporting smallholder farmers with mapping, mobile data collection, and agricultural program management tools.",
+  description: "The platform for organizations that support smallholder farmers. Register farmers, map their land, run field operations offline, and prove impact and compliance, in one place.",
   url: "https://shamba.land",
   author: {
     "@type": "Organization",
