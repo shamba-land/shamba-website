@@ -804,11 +804,10 @@ export function ProductShowcase() {
             <span className="text-xs font-semibold text-white uppercase tracking-wider">Platform Overview</span>
           </div>
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-            Your team in the office{" "}
-            <span className="text-foreground">and in the field</span>
+            One platform, for the office, and the field
           </h2>
           <p className="text-lg text-muted-foreground md:text-xl">
-            Run your programs from the platform, collect in the field offline, all on one record.
+            Manage your farmer network on the platform, and capture data offline in the field.
           </p>
         </div>
 
