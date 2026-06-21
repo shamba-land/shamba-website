@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shamba | Agricultural Data Platform",
-  description: "Shamba is a geospatial CRM platform for managing smallholder farmers with offline-first mobile data collection, GPS boundary mapping, and program management.",
+  title: "Shamba | Putting smallholders on the map",
+  description: "Shamba is the platform for smallholder organizations. Manage your farmer network from the office and capture farm data offline in the field, with plot mapping, surveys, traceability, and program management in one shared record.",
   keywords: [
     "smallholder farmer CRM",
     "agricultural CRM",
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Shamba - Geospatial CRM for Smallholder Farmers",
-    description: "Powerful geospatial CRM platform for organizations supporting smallholder farmers. Mapping, mobile data collection, and agricultural program management.",
+    title: "Shamba | Putting smallholders on the map",
+    description: "Manage your farmer network from the office and capture farm data offline in the field. Plot mapping, surveys, traceability, and program management in one shared record.",
     url: "https://shamba.land",
     siteName: "Shamba",
     locale: "en_US",
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shamba - Geospatial CRM for Smallholder Farmers",
-    description: "Powerful geospatial CRM platform for organizations supporting smallholder farmers.",
+    title: "Shamba | Putting smallholders on the map",
+    description: "Manage your farmer network from the office and capture farm data offline in the field.",
   },
   robots: {
     index: true,
@@ -75,7 +75,7 @@ const jsonLd = {
   name: "Shamba",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web, Android, iOS",
-  description: "Geospatial CRM platform for organizations supporting smallholder farmers with mapping, mobile data collection, and agricultural program management tools.",
+  description: "The platform for smallholder organizations. Manage your farmer network from the office and capture farm data offline in the field, with plot mapping, surveys, traceability, and program management in one shared record.",
   url: "https://shamba.land",
   author: {
     "@type": "Organization",
