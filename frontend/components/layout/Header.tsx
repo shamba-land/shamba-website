@@ -94,7 +94,7 @@ export function Header() {
                 <a href="https://platform.shamba.land/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
               <Button asChild className="md:hidden">
-                <a href="#contact">Request Demo</a>
+                <a href="https://platform.shamba.land/signup" target="_blank" rel="noopener noreferrer">Sign up</a>
               </Button>
             </>
           ) : (
@@ -110,7 +110,7 @@ export function Header() {
                 <a href="https://platform.shamba.land/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
               <Button asChild className="md:hidden bg-white text-primary hover:bg-white/90">
-                <a href="#contact">Request Demo</a>
+                <a href="https://platform.shamba.land/signup" target="_blank" rel="noopener noreferrer">Sign up</a>
               </Button>
             </>
           )}
