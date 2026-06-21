@@ -838,8 +838,8 @@ export function ProductShowcase() {
                   onMouseEnter={() => setActiveWebFeature("collaboration")}
                   onClick={() => setActiveWebFeature("collaboration")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -858,8 +858,8 @@ export function ProductShowcase() {
                   onMouseEnter={() => setActiveWebFeature("analytics")}
                   onClick={() => setActiveWebFeature("analytics")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -878,8 +878,8 @@ export function ProductShowcase() {
                   onMouseEnter={() => setActiveWebFeature("traceability")}
                   onClick={() => setActiveWebFeature("traceability")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -972,8 +972,8 @@ export function ProductShowcase() {
                   onMouseEnter={() => setActiveMobileFeature("offline")}
                   onClick={() => setActiveMobileFeature("offline")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -992,8 +992,8 @@ export function ProductShowcase() {
                   onMouseEnter={() => setActiveMobileFeature("onboarding")}
                   onClick={() => setActiveMobileFeature("onboarding")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -1012,8 +1012,8 @@ export function ProductShowcase() {
                   onMouseEnter={() => setActiveMobileFeature("interactions")}
                   onClick={() => setActiveMobileFeature("interactions")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -1032,8 +1032,8 @@ export function ProductShowcase() {
                   onMouseEnter={() => setActiveMobileFeature("device")}
                   onClick={() => setActiveMobileFeature("device")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
