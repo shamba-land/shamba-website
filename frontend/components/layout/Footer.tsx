@@ -23,7 +23,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Empowering smallholder farmers through geospatial CRM technology.
+              The platform for organizations that support smallholder farmers.
             </p>
           </div>
 
@@ -67,7 +67,7 @@ export function Footer() {
                   href="#contact"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  Contact
+                  Request a Demo
                 </a>
               </li>
             </ul>

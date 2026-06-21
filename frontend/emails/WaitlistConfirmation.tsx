@@ -114,8 +114,8 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
                 margin: "0 0 16px",
               }}
             >
-              Shamba.land is a geospatial CRM for organizations that
-              support smallholder farmers. The platform combines:
+              Shamba is the platform for organizations that support
+              smallholder farmers. In one place, you can:
             </Text>
             <Text
               style={{
@@ -126,21 +126,17 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
                 paddingLeft: "8px",
               }}
             >
-              <strong style={{ color: "#2F5D3A" }}>Geospatial mapping</strong>
-              {" "}&mdash; Visualize farmer locations, field boundaries, and
-              regional data on interactive maps
+              <strong style={{ color: "#2F5D3A" }}>Register farmers and map their land</strong>
+              {" "}(even offline, out in the field)
               <br />
-              <strong style={{ color: "#2F5D3A" }}>Farmer profiles</strong>
-              {" "}&mdash; Comprehensive relationship management tailored to
-              agricultural organizations
+              <strong style={{ color: "#2F5D3A" }}>Run surveys, training, and input distributions</strong>
+              {" "}(from one shared record)
               <br />
-              <strong style={{ color: "#2F5D3A" }}>Mobile data collection</strong>
-              {" "}&mdash; Offline-first app for field teams to capture data,
-              photos, and GPS coordinates
+              <strong style={{ color: "#2F5D3A" }}>Prove impact and compliance</strong>
+              {" "}(to buyers, certifiers, and funders)
               <br />
-              <strong style={{ color: "#2F5D3A" }}>Impact analytics</strong>
-              {" "}&mdash; Track program outcomes, adoption rates, and
-              measurable impact
+              <strong style={{ color: "#2F5D3A" }}>Keep a lasting record</strong>
+              {" "}(that follows each farmer over time)
             </Text>
           </Section>
 
