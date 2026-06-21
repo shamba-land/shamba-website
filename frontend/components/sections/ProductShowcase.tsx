@@ -937,8 +937,8 @@ export function ProductShowcase() {
                       {/* Screen - Shows one visualization at a time */}
                       <div className="relative rounded-[1.75rem] overflow-hidden">
                         <div className="aspect-[9/19.5] relative bg-background">
-                          <OfflineVisualization isActive={activeMobileFeature === "onboarding" || activeMobileFeature === "interactions"} />
-                          <GeometryVisualization isActive={activeMobileFeature === "geometry" || activeMobileFeature === null} />
+                          <OfflineVisualization isActive={activeMobileFeature === "interactions"} />
+                          <GeometryVisualization isActive={activeMobileFeature === "onboarding" || activeMobileFeature === "geometry" || activeMobileFeature === null} />
                           <SatelliteVisualization isActive={activeMobileFeature === "offline"} />
                           <DeviceVisualization isActive={activeMobileFeature === "device"} />
                         </div>
