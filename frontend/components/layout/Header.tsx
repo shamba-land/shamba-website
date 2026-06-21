@@ -82,7 +82,7 @@ export function Header() {
           {isScrolled ? (
             <>
               <Button variant="outline" asChild className="hidden md:inline-flex hover:bg-primary/10 hover:text-primary">
-                <a href="#contact">Contact us</a>
+                <a href="#contact">Request Demo</a>
               </Button>
               {/* Desktop: Open the live app. Mobile: surface a demo CTA
                   instead — sending mobile visitors straight into the app
@@ -104,7 +104,7 @@ export function Header() {
                 asChild
                 className="hidden md:inline-flex bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white"
               >
-                <a href="#contact">Contact us</a>
+                <a href="#contact">Request Demo</a>
               </Button>
               <Button asChild className="hidden md:inline-flex bg-white text-primary hover:bg-white/90">
                 <a href="https://platform.shamba.land/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>

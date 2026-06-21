@@ -1,10 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { GeoDecorations } from "@/components/ui/GeoDecorations";
 
-type WebFeature = "map" | "analytics" | "collaboration" | null;
-type MobileFeature = "offline" | "geometry" | "satellite" | "device" | null;
+type WebFeature = "collaboration" | "analytics" | "traceability" | null;
+type MobileFeature = "onboarding" | "offline" | "geometry" | "interactions" | "device" | null;
+
+const WEB_ORDER: WebFeature[] = ["collaboration", "analytics", "traceability"];
+const MOBILE_ORDER: MobileFeature[] = ["offline", "onboarding", "interactions", "device"];
 
 // Separate visualization components for each Web feature
 function MapVisualization({ isActive }: { isActive: boolean }) {
@@ -769,11 +773,20 @@ function DeviceVisualization({ isActive }: { isActive: boolean }) {
 }
 
 export function ProductShowcase() {
-  const [activeWebFeature, setActiveWebFeature] = useState<WebFeature>("map");
-  const [activeMobileFeature, setActiveMobileFeature] = useState<MobileFeature>("geometry");
+  const [activeWebFeature, setActiveWebFeature] = useState<WebFeature>("collaboration");
+  const [activeMobileFeature, setActiveMobileFeature] = useState<MobileFeature>("onboarding");
+  const [paused, setPaused] = useState(false);
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => {
+      setActiveWebFeature((c) => WEB_ORDER[(WEB_ORDER.indexOf(c) + 1) % WEB_ORDER.length]);
+      setActiveMobileFeature((c) => MOBILE_ORDER[(MOBILE_ORDER.indexOf(c) + 1) % MOBILE_ORDER.length]);
+    }, 4000);
+    return () => clearInterval(id);
+  }, [paused]);
 
   return (
-    <section id="platform" className="relative overflow-hidden py-24 md:py-32 geo-grid-bg">
+    <section id="platform" className="relative overflow-hidden py-16 md:py-24 geo-grid-bg" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       {/* Warm earth-toned background with smooth gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/8 to-background" />
 
@@ -783,17 +796,19 @@ export function ProductShowcase() {
       {/* Smooth gradient transition to next section */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
 
+      <GeoDecorations />
+
       <div className="container relative">
         <div className="mx-auto max-w-3xl text-center mb-20">
-          <div className="mb-4 inline-flex items-center rounded-full border border-blue-light/40 px-4 py-1.5">
-            <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">Platform Overview</span>
+          <div className="mb-4 inline-flex items-center rounded-full bg-[oklch(0.55_0.15_240)] px-4 py-1.5">
+            <span className="text-xs font-semibold text-white uppercase tracking-wider">Platform Overview</span>
           </div>
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-            Desktop Power,{" "}
-            <span className="text-primary">Mobile Flexibility</span>
+            Your team in the office{" "}
+            <span className="text-foreground">and in the field</span>
           </h2>
           <p className="text-lg text-muted-foreground md:text-xl">
-            Access your farmer data anywhere with our comprehensive web platform and offline-capable mobile app
+            Run your programs from the platform, collect in the field offline, all on one record.
           </p>
         </div>
 
@@ -802,75 +817,75 @@ export function ProductShowcase() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             {/* Content */}
             <ScrollReveal className="order-2 lg:order-1">
-              <div className="mb-4 inline-flex items-center rounded-full border border-blue-light/40 px-3 py-1.5">
-                <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">Web Platform</span>
+              <div className="mb-4 inline-flex items-center rounded-full bg-[oklch(0.55_0.15_240)] px-3 py-1.5">
+                <span className="text-xs font-semibold text-white uppercase tracking-wider">Web Platform</span>
               </div>
               <h3 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
-                Powerful Command Center
+                Manage everything from one place
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
-                Manage your entire farmer network from our intuitive web dashboard. Visualize data on interactive maps, generate insights, and coordinate field operations.
+                Every farmer, plot, and program in one platform.
               </p>
 
-              {/* Features - consistent blue styling */}
+              {/* Features */}
               <div className="space-y-4">
                 <button
-                  className={`w-full flex gap-3 p-3 rounded-lg text-left transition-all ${
-                    activeWebFeature === "map"
-                      ? "bg-blue-light/10 border border-blue-light/30"
-                      : "hover:bg-muted/50 border border-transparent"
-                  }`}
-                  onMouseEnter={() => setActiveWebFeature("map")}
-                  onClick={() => setActiveWebFeature("map")}
-                >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-blue-light/20 flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Interactive Geospatial Maps</h4>
-                    <p className="text-sm text-muted-foreground">View farmer locations, field boundaries, and regional analytics with multiple map layers</p>
-                  </div>
-                </button>
-
-                <button
-                  className={`w-full flex gap-3 p-3 rounded-lg text-left transition-all ${
-                    activeWebFeature === "analytics"
-                      ? "bg-blue-light/10 border border-blue-light/30"
-                      : "hover:bg-muted/50 border border-transparent"
-                  }`}
-                  onMouseEnter={() => setActiveWebFeature("analytics")}
-                  onClick={() => setActiveWebFeature("analytics")}
-                >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-blue-light/20 flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Advanced Analytics Dashboard</h4>
-                    <p className="text-sm text-muted-foreground">Real-time insights, custom reports, and trend analysis across your programs</p>
-                  </div>
-                </button>
-
-                <button
-                  className={`w-full flex gap-3 p-3 rounded-lg text-left transition-all ${
+                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
                     activeWebFeature === "collaboration"
-                      ? "bg-blue-light/10 border border-blue-light/30"
-                      : "hover:bg-muted/50 border border-transparent"
-                  }`}
+                      ? "is-active border-transparent"
+                      : "hover:bg-muted/50 border-transparent"
+                  } hover:border-primary`}
                   onMouseEnter={() => setActiveWebFeature("collaboration")}
                   onClick={() => setActiveWebFeature("collaboration")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-blue-light/20 flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Team Collaboration Tools</h4>
-                    <p className="text-sm text-muted-foreground">Role-based access, task assignment, and communication features for field teams</p>
+                    <h4 className="font-semibold">Task management</h4>
+                    <p className="text-sm text-muted-foreground">Assign field work and track it to completion</p>
+                  </div>
+                </button>
+
+                <button
+                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
+                    activeWebFeature === "analytics"
+                      ? "is-active border-transparent"
+                      : "hover:bg-muted/50 border-transparent"
+                  } hover:border-primary`}
+                  onMouseEnter={() => setActiveWebFeature("analytics")}
+                  onClick={() => setActiveWebFeature("analytics")}
+                >
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Impact reporting</h4>
+                    <p className="text-sm text-muted-foreground">Generate reports funders and buyers trust</p>
+                  </div>
+                </button>
+
+                <button
+                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
+                    activeWebFeature === "traceability"
+                      ? "is-active border-transparent"
+                      : "hover:bg-muted/50 border-transparent"
+                  } hover:border-primary`}
+                  onMouseEnter={() => setActiveWebFeature("traceability")}
+                  onClick={() => setActiveWebFeature("traceability")}
+                >
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Traceability</h4>
+                    <p className="text-sm text-muted-foreground">Trace produce from the farm to the buyer</p>
                   </div>
                 </button>
               </div>
@@ -895,9 +910,9 @@ export function ProductShowcase() {
 
                   {/* Dashboard Content - Shows one visualization at a time */}
                   <div className="aspect-[16/10] relative overflow-hidden">
-                    <MapVisualization isActive={activeWebFeature === "map" || activeWebFeature === null} />
+                    <MapVisualization isActive={activeWebFeature === "traceability"} />
                     <AnalyticsVisualization isActive={activeWebFeature === "analytics"} />
-                    <CollaborationVisualization isActive={activeWebFeature === "collaboration"} />
+                    <CollaborationVisualization isActive={activeWebFeature === "collaboration" || activeWebFeature === null} />
                   </div>
                 </div>
               </div>
@@ -922,9 +937,9 @@ export function ProductShowcase() {
                       {/* Screen - Shows one visualization at a time */}
                       <div className="relative rounded-[1.75rem] overflow-hidden">
                         <div className="aspect-[9/19.5] relative bg-background">
-                          <OfflineVisualization isActive={activeMobileFeature === "offline"} />
+                          <OfflineVisualization isActive={activeMobileFeature === "onboarding" || activeMobileFeature === "interactions"} />
                           <GeometryVisualization isActive={activeMobileFeature === "geometry" || activeMobileFeature === null} />
-                          <SatelliteVisualization isActive={activeMobileFeature === "satellite"} />
+                          <SatelliteVisualization isActive={activeMobileFeature === "offline"} />
                           <DeviceVisualization isActive={activeMobileFeature === "device"} />
                         </div>
                       </div>
@@ -936,95 +951,95 @@ export function ProductShowcase() {
 
             {/* Content */}
             <ScrollReveal delay={200}>
-              <div className="mb-4 inline-flex items-center rounded-full border border-blue-light/40 px-3 py-1.5">
-                <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">Mobile App</span>
+              <div className="mb-4 inline-flex items-center rounded-full bg-[oklch(0.55_0.15_240)] px-3 py-1.5">
+                <span className="text-xs font-semibold text-white uppercase tracking-wider">Mobile App</span>
               </div>
               <h3 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
-                Field-Ready Data Collection
+                Built for the field
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
-                Work offline in remote areas with our mobile app. Capture data, photos, and GPS coordinates, then sync when you&apos;re back online.
+                Field teams collect on a simple app that syncs when back online.
               </p>
 
-              {/* Features - consistent blue styling */}
+              {/* Features */}
               <div className="space-y-4">
                 <button
-                  className={`w-full flex gap-3 p-3 rounded-lg text-left transition-all ${
+                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
                     activeMobileFeature === "offline"
-                      ? "bg-blue-light/10 border border-blue-light/30"
-                      : "hover:bg-muted/50 border border-transparent"
-                  }`}
+                      ? "is-active border-transparent"
+                      : "hover:bg-muted/50 border-transparent"
+                  } hover:border-primary`}
                   onMouseEnter={() => setActiveMobileFeature("offline")}
                   onClick={() => setActiveMobileFeature("offline")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-blue-light/20 flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Offline-First Architecture</h4>
-                    <p className="text-sm text-muted-foreground">Collect data without internet, automatically sync when connected</p>
+                    <h4 className="font-semibold">Offline-first</h4>
+                    <p className="text-sm text-muted-foreground">Download maps and work fully offline in the field</p>
                   </div>
                 </button>
 
                 <button
-                  className={`w-full flex gap-3 p-3 rounded-lg text-left transition-all ${
-                    activeMobileFeature === "geometry"
-                      ? "bg-blue-light/10 border border-blue-light/30"
-                      : "hover:bg-muted/50 border border-transparent"
-                  }`}
-                  onMouseEnter={() => setActiveMobileFeature("geometry")}
-                  onClick={() => setActiveMobileFeature("geometry")}
+                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
+                    activeMobileFeature === "onboarding"
+                      ? "is-active border-transparent"
+                      : "hover:bg-muted/50 border-transparent"
+                  } hover:border-primary`}
+                  onMouseEnter={() => setActiveMobileFeature("onboarding")}
+                  onClick={() => setActiveMobileFeature("onboarding")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-blue-light/20 flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Geometry Collection</h4>
-                    <p className="text-sm text-muted-foreground">Draw field boundaries, mark plot locations, and measure areas with GPS precision</p>
+                    <h4 className="font-semibold">Farmer onboarding</h4>
+                    <p className="text-sm text-muted-foreground">Register farmers and map their plots in the field</p>
                   </div>
                 </button>
 
                 <button
-                  className={`w-full flex gap-3 p-3 rounded-lg text-left transition-all ${
-                    activeMobileFeature === "satellite"
-                      ? "bg-blue-light/10 border border-blue-light/30"
-                      : "hover:bg-muted/50 border border-transparent"
-                  }`}
-                  onMouseEnter={() => setActiveMobileFeature("satellite")}
-                  onClick={() => setActiveMobileFeature("satellite")}
+                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
+                    activeMobileFeature === "interactions"
+                      ? "is-active border-transparent"
+                      : "hover:bg-muted/50 border-transparent"
+                  } hover:border-primary`}
+                  onMouseEnter={() => setActiveMobileFeature("interactions")}
+                  onClick={() => setActiveMobileFeature("interactions")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-blue-light/20 flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Satellite Imagery Backgrounds</h4>
-                    <p className="text-sm text-muted-foreground">Navigate with cached satellite maps even without connectivity</p>
+                    <h4 className="font-semibold">Track interactions</h4>
+                    <p className="text-sm text-muted-foreground">A synced log of every farmer visit and interaction</p>
                   </div>
                 </button>
 
                 <button
-                  className={`w-full flex gap-3 p-3 rounded-lg text-left transition-all ${
+                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
                     activeMobileFeature === "device"
-                      ? "bg-blue-light/10 border border-blue-light/30"
-                      : "hover:bg-muted/50 border border-transparent"
-                  }`}
+                      ? "is-active border-transparent"
+                      : "hover:bg-muted/50 border-transparent"
+                  } hover:border-primary`}
                   onMouseEnter={() => setActiveMobileFeature("device")}
                   onClick={() => setActiveMobileFeature("device")}
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-blue-light/20 flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-[oklch(0.55_0.15_240)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Works on Any Device</h4>
-                    <p className="text-sm text-muted-foreground">Available for Android and iOS smartphones and tablets</p>
+                    <h4 className="font-semibold">Multi-platform</h4>
+                    <p className="text-sm text-muted-foreground">Works on any Android or iOS device</p>
                   </div>
                 </button>
               </div>

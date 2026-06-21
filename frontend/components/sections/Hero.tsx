@@ -28,15 +28,14 @@ export function Hero() {
           {/* Left side - Text content */}
           <div className="flex flex-col max-w-2xl">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-              Geospatial CRM for{" "}
+              Putting smallholders{" "}
               <span className="text-white/90">
-                Smallholder Farmers
+                on the map
               </span>
             </h1>
 
             <p className="text-lg text-white/90 md:text-xl">
-              Location-aware tools that help organizations support
-              smallholder farmers at scale.
+              Shamba helps cooperatives, NGOs, and sustainability programs know their farmers, map their land, and prove their impact, all in one place.
             </p>
           </div>
 

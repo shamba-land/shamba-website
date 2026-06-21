@@ -6,7 +6,6 @@ import { ProductShowcase } from "@/components/sections/ProductShowcase";
 import { FeatureCard } from "@/components/sections/FeatureCard";
 import { WaitlistForm } from "@/components/sections/WaitlistForm";
 import { GeoDecorations } from "@/components/ui/GeoDecorations";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -23,7 +22,7 @@ export default function Home() {
         <ProductShowcase />
 
         {/* Features Section */}
-        <section id="features" className="relative overflow-hidden py-20 md:py-28 geo-grid-bg">
+        <section id="features" className="relative overflow-hidden py-16 md:py-24">
           {/* Subtle warm background */}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/4 to-background" />
 
@@ -31,19 +30,16 @@ export default function Home() {
           <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
 
-          {/* Geospatial decorations */}
-          <GeoDecorations />
-
           <div className="container relative">
             <div className="mx-auto max-w-3xl text-center mb-16">
-              <div className="mb-4 inline-flex items-center rounded-full border border-blue-light/40 px-4 py-1.5">
-                <span className="text-xs font-semibold text-blue-light uppercase tracking-wider">Platform Capabilities</span>
+              <div className="mb-4 inline-flex items-center rounded-full bg-[oklch(0.55_0.15_240)] px-4 py-1.5">
+                <span className="text-xs font-semibold text-white uppercase tracking-wider">Benefits</span>
               </div>
               <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-                Powerful Features for Field Organizations
+                What Shamba enables
               </h2>
               <p className="text-lg text-muted-foreground md:text-xl">
-                Everything you need to manage and support smallholder farmers effectively in one integrated platform
+                Why organizations use Shamba
               </p>
             </div>
 
@@ -64,8 +60,8 @@ export default function Home() {
                     />
                   </svg>
                 }
-                title="Geospatial Mapping"
-                description="Visualize farmer locations, field boundaries, and agricultural data on interactive maps. Track progress across regions."
+                title="Trace supply chains"
+                description="Follow products from farmer to market with trusted, auditable records."
                 delay={0}
               />
 
@@ -85,8 +81,8 @@ export default function Home() {
                     />
                   </svg>
                 }
-                title="Farmer Relationship Management"
-                description="Manage detailed farmer profiles, track interactions, and maintain comprehensive records of all engagements."
+                title="Digitize operations"
+                description="Replace paper and spreadsheets with field workflows that just work."
                 delay={100}
               />
 
@@ -106,8 +102,8 @@ export default function Home() {
                     />
                   </svg>
                 }
-                title="Data Analytics"
-                description="Generate insights from your data with powerful analytics. Track yields, adoption rates, and impact metrics."
+                title="Report impact"
+                description="Turn field data into clear reports for funders and buyers."
                 delay={200}
               />
 
@@ -127,8 +123,8 @@ export default function Home() {
                     />
                   </svg>
                 }
-                title="Mobile Data Collection"
-                description="Collect field data offline with our mobile app. Sync automatically when connectivity is available."
+                title="Scale your reach"
+                description="Grow programs and farmer networks without growing the complexity."
                 delay={300}
               />
 
@@ -148,8 +144,8 @@ export default function Home() {
                     />
                   </svg>
                 }
-                title="Secure & Compliant"
-                description="Enterprise-grade security with role-based access control. GDPR compliant data management."
+                title="Unlock financing"
+                description="Build the trusted records that impact financing and farmer support rely on."
                 delay={400}
               />
 
@@ -169,8 +165,8 @@ export default function Home() {
                     />
                   </svg>
                 }
-                title="Program Management"
-                description="Plan and track agricultural programs, training sessions, and interventions across your organization."
+                title="Connect communities"
+                description="Link farmers to certifications, services, and market opportunities."
                 delay={500}
               />
             </div>
@@ -178,7 +174,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section id="contact" className="relative overflow-hidden py-20 md:py-28 geo-grid-bg">
+        <section id="contact" className="relative overflow-hidden py-40 md:py-48 geo-grid-bg">
           {/* Warm gradient background */}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
@@ -189,21 +185,17 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/8 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/8 rounded-full blur-3xl" />
 
+          <GeoDecorations />
+
           <div className="container relative">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-                Built for organizations supporting smallholder farmers
+                Ready to scale impact?
               </h2>
               <p className="text-lg text-muted-foreground mb-10 md:text-xl">
-                A geospatial CRM purpose-built for farmer programs.
-                Request a demo to see it in action.
+                Request a demo to learn what Shamba can mean for your organization.
               </p>
               <WaitlistForm />
-              <div className="mt-6 text-center">
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-secondary/10 border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-foreground" asChild>
-                  <a href="mailto:info@shamba.land">Contact us</a>
-                </Button>
-              </div>
             </div>
           </div>
         </section>
