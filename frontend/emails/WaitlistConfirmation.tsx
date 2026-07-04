@@ -27,7 +27,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
         <meta name="supported-color-schemes" content="light" />
       </Head>
       <Preview>
-        Welcome to Shamba.land. Thanks for joining the waitlist.
+        Thanks for requesting a Shamba demo. We&apos;ll be in touch shortly.
       </Preview>
       <Body
         style={{
@@ -242,7 +242,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
           >
             &copy; {new Date().getFullYear()} Shamba B.V. All rights reserved.
             <br />
-            You&apos;re receiving this because you signed up for the waitlist at{" "}
+            You&apos;re receiving this because you requested a demo at{" "}
             <Link
               href="https://shamba.land"
               style={{ color: "#7A7A7A" }}

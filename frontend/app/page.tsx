@@ -4,7 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Products } from "@/components/sections/Products";
 import { ProductShowcase } from "@/components/sections/ProductShowcase";
 import { FeatureCard } from "@/components/sections/FeatureCard";
-import { WaitlistForm } from "@/components/sections/WaitlistForm";
+import { DemoRequestForm } from "@/components/sections/DemoRequestForm";
 import { GeoDecorations } from "@/components/ui/GeoDecorations";
 
 export default function Home() {
@@ -195,7 +195,7 @@ export default function Home() {
               <p className="text-lg text-muted-foreground mb-10 md:text-xl">
                 Request a demo to learn what Shamba can mean for your organization.
               </p>
-              <WaitlistForm />
+              <DemoRequestForm />
             </div>
           </div>
         </section>

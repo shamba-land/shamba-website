@@ -3,13 +3,13 @@
 import { useActionState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { joinWaitlist, type WaitlistState } from "@/app/actions/waitlist";
+import { requestDemo, type DemoRequestState } from "@/app/actions/demo-request";
 
-export function WaitlistForm() {
+export function DemoRequestForm() {
   const [state, formAction, isPending] = useActionState<
-    WaitlistState,
+    DemoRequestState,
     FormData
-  >(joinWaitlist, null);
+  >(requestDemo, null);
 
   if (state?.success) {
     return (
@@ -29,10 +29,10 @@ export function WaitlistForm() {
             />
           </svg>
           <p className="text-lg font-semibold text-foreground">
-            You&apos;re on the list!
+            Demo request received
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
-            Check your inbox for a confirmation email.
+            Check your inbox for a confirmation. We&apos;ll be in touch shortly.
           </p>
         </div>
       </div>
@@ -42,6 +42,17 @@ export function WaitlistForm() {
   return (
     <div className="mx-auto max-w-lg">
       <form action={formAction} className="flex flex-col gap-3 sm:flex-row">
+        {/* Honeypot: hidden from real users; bots that fill every field get
+            caught server-side. Not a real input, so keep it out of tab order
+            and autofill. */}
+        <input
+          type="text"
+          name="company"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="hidden"
+        />
         <Input
           type="email"
           name="email"
