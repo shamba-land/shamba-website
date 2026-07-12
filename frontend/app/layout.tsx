@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shamba | Putting smallholders on the map",
     description: "Manage your farmer network from the office and capture farm data offline in the field. Plot mapping, surveys, traceability, and program management in one shared record.",
-    url: "https://shamba.land",
+    url: "https://shamba.com",
     siteName: "Shamba",
     locale: "en_US",
     type: "website",
@@ -76,11 +76,11 @@ const jsonLd = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web, Android, iOS",
   description: "The platform for smallholder organizations. Manage your farmer network from the office and capture farm data offline in the field, with plot mapping, surveys, traceability, and program management in one shared record.",
-  url: "https://shamba.land",
+  url: "https://shamba.com",
   author: {
     "@type": "Organization",
-    name: "Shamba.land",
-    url: "https://shamba.land",
+    name: "Shamba",
+    url: "https://shamba.com",
   },
   offers: {
     "@type": "Offer",

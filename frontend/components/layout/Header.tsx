@@ -48,7 +48,7 @@ export function Header() {
           <Link href="/" className="flex items-center">
             <Image
               src={isScrolled ? "/logo.svg" : "/logo-white.svg"}
-              alt="Shamba.land"
+              alt="Shamba"
               width={111}
               height={32}
               className="h-6 w-auto transition-opacity duration-300"
@@ -91,10 +91,10 @@ export function Header() {
                   flow; the app's auth guard sends already-signed-in
                   users to their home. */}
               <Button asChild className="hidden md:inline-flex">
-                <a href="https://platform.shamba.land/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
+                <a href="https://platform.shamba.com/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
               <Button asChild className="md:hidden">
-                <a href="https://platform.shamba.land/signup" target="_blank" rel="noopener noreferrer">Sign up</a>
+                <a href="https://platform.shamba.com/signup" target="_blank" rel="noopener noreferrer">Sign up</a>
               </Button>
             </>
           ) : (
@@ -107,10 +107,10 @@ export function Header() {
                 <a href="#contact">Request Demo</a>
               </Button>
               <Button asChild className="hidden md:inline-flex bg-white text-primary hover:bg-white/90">
-                <a href="https://platform.shamba.land/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
+                <a href="https://platform.shamba.com/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
               <Button asChild className="md:hidden bg-white text-primary hover:bg-white/90">
-                <a href="https://platform.shamba.land/signup" target="_blank" rel="noopener noreferrer">Sign up</a>
+                <a href="https://platform.shamba.com/signup" target="_blank" rel="noopener noreferrer">Sign up</a>
               </Button>
             </>
           )}

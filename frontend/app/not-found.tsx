@@ -13,7 +13,7 @@ export default function NotFound() {
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.svg"
-              alt="Shamba.land"
+              alt="Shamba"
               width={111}
               height={32}
               className="h-6 w-auto"
