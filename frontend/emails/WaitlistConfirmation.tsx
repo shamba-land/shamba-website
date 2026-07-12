@@ -45,9 +45,9 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
           }}
         >
           <Img
-            src="https://shamba.land/logo.png"
+            src="https://shamba.com/logo.png"
             width="120"
-            alt="Shamba.land"
+            alt="Shamba"
             style={{ marginBottom: "32px" }}
           />
 
@@ -71,7 +71,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
               margin: "0 0 16px",
             }}
           >
-            Thanks for your interest in Shamba.land.
+            Thanks for your interest in Shamba.
           </Text>
 
           <Text
@@ -222,10 +222,10 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
             Have questions or want to learn more? Reply to this email or reach
             out to us at{" "}
             <Link
-              href="mailto:info@shamba.land"
+              href="mailto:info@shamba.com"
               style={{ color: "#2C5F7F", textDecoration: "underline" }}
             >
-              info@shamba.land
+              info@shamba.com
             </Link>
             . We&apos;d love to hear from you.
           </Text>
@@ -244,10 +244,10 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
             <br />
             You&apos;re receiving this because you requested a demo at{" "}
             <Link
-              href="https://shamba.land"
+              href="https://shamba.com"
               style={{ color: "#7A7A7A" }}
             >
-              shamba.land
+              shamba.com
             </Link>
             .
           </Text>

@@ -59,7 +59,7 @@ export async function requestDemo(
         await hubspot.crm.objects.tasks.basicApi.create({
           properties: {
             hs_task_subject: `Demo request: ${email}`,
-            hs_task_body: `New demo request from shamba.land\nEmail: ${email}\nTime: ${new Date().toISOString()}`,
+            hs_task_body: `New demo request from shamba.com\nEmail: ${email}\nTime: ${new Date().toISOString()}`,
             hs_task_status: "NOT_STARTED",
             hs_task_priority: "HIGH",
             hs_timestamp: Date.now().toString(),
@@ -76,7 +76,7 @@ export async function requestDemo(
 
     // Branded auto-reply to the requester.
     await resend.emails.send({
-      from: "Shamba.land <hello@shamba.land>",
+      from: "Shamba <hello@shamba.com>",
       to: email,
       subject: "Thanks for requesting a Shamba demo",
       react: WaitlistConfirmation({ email }),
@@ -84,10 +84,10 @@ export async function requestDemo(
 
     // Notify the team.
     await resend.emails.send({
-      from: "Demo requests <hello@shamba.land>",
-      to: "info@shamba.land",
+      from: "Demo requests <hello@shamba.com>",
+      to: "info@shamba.com",
       subject: `New demo request: ${email}`,
-      text: `New demo request on shamba.land:\n\nEmail: ${email}\nTime: ${new Date().toISOString()}`,
+      text: `New demo request on shamba.com:\n\nEmail: ${email}\nTime: ${new Date().toISOString()}`,
     });
 
     return { success: true, message: SUCCESS_MESSAGE };
@@ -96,7 +96,7 @@ export async function requestDemo(
     return {
       success: false,
       message:
-        "Something went wrong. Please try again or email us at info@shamba.land.",
+        "Something went wrong. Please try again or email us at info@shamba.com.",
     };
   }
 }
