@@ -81,7 +81,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           {isScrolled ? (
             <>
-              <Button variant="outline" asChild className="hidden md:inline-flex hover:bg-primary/10 hover:text-primary">
+              <Button variant="outline" asChild className="hidden md:inline-flex bg-white hover:bg-primary/10 hover:text-primary">
                 <a href="#contact">Request Demo</a>
               </Button>
               {/* Desktop: Open the live app. Mobile: surface a demo CTA

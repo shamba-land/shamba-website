@@ -4,37 +4,34 @@ import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-muted/30">
+    <footer className="bg-[#25241F] text-white">
       <div className="container py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo-icon.svg"
+                src="/logo-icon-white.svg"
                 alt=""
                 width={20}
                 height={26}
                 className="h-6 w-auto"
               />
-              <div className="flex items-baseline gap-1">
-                <span className="text-xl font-bold text-primary">Shamba</span>
-                <span className="text-xl font-bold text-accent">.land</span>
-              </div>
+              <span className="text-xl font-bold text-white">Shamba</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white/70">
               The platform for organizations that support smallholder farmers.
             </p>
           </div>
 
           {/* Product */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground">Product</h4>
+            <h4 className="text-sm font-semibold text-white">Product</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   href="#products"
-                  className="text-muted-foreground transition-colors hover:text-primary"
+                  className="text-white/70 transition-colors hover:text-white"
                 >
                   Products
                 </a>
@@ -42,7 +39,7 @@ export function Footer() {
               <li>
                 <a
                   href="#platform"
-                  className="text-muted-foreground transition-colors hover:text-primary"
+                  className="text-white/70 transition-colors hover:text-white"
                 >
                   Platform
                 </a>
@@ -50,7 +47,7 @@ export function Footer() {
               <li>
                 <a
                   href="#features"
-                  className="text-muted-foreground transition-colors hover:text-primary"
+                  className="text-white/70 transition-colors hover:text-white"
                 >
                   Features
                 </a>
@@ -60,12 +57,12 @@ export function Footer() {
 
           {/* Company */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground">Company</h4>
+            <h4 className="text-sm font-semibold text-white">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   href="#contact"
-                  className="text-muted-foreground transition-colors hover:text-primary"
+                  className="text-white/70 transition-colors hover:text-white"
                 >
                   Request a Demo
                 </a>
@@ -74,17 +71,17 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-8" />
+        <Separator className="my-8 bg-white/15" />
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-white/60">
             &copy; {new Date().getFullYear()} Shamba B.V. All rights reserved.
           </p>
           <a
             href="https://github.com/shamba-land"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+            className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
           >
             <svg
               className="h-5 w-5"
