@@ -28,9 +28,9 @@ export function Hero() {
           {/* Left side - Text content */}
           <div className="flex flex-col max-w-2xl">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-              Digital infrastructure for organizations working with{" "}
+              Digital infrastructure for{" "}
               <span className="text-white/90">
-                smallholder farmers
+                smallholder organizations
               </span>
             </h1>
 

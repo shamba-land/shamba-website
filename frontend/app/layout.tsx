@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shamba | Digital infrastructure for smallholder agriculture",
+  title: "Shamba | Digital infrastructure for smallholder organizations",
   description: "Shamba is the platform for smallholder organizations. Manage your farmer network from the office and capture farm data offline in the field, with plot mapping, surveys, traceability, and program management in one shared record.",
   keywords: [
     "smallholder farmer CRM",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Shamba | Digital infrastructure for smallholder agriculture",
+    title: "Shamba | Digital infrastructure for smallholder organizations",
     description: "Manage your farmer network from the office and capture farm data offline in the field. Plot mapping, surveys, traceability, and program management in one shared record.",
     url: "https://shamba.com",
     siteName: "Shamba",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shamba | Digital infrastructure for smallholder agriculture",
+    title: "Shamba | Digital infrastructure for smallholder organizations",
     description: "Manage your farmer network from the office and capture farm data offline in the field.",
   },
   robots: {
