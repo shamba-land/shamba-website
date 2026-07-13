@@ -5,10 +5,10 @@ import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { GeoDecorations } from "@/components/ui/GeoDecorations";
 
-type WebFeature = "collaboration" | "analytics" | "traceability" | null;
+type WebFeature = "collaboration" | "analytics" | "traceability" | "distribution" | null;
 type MobileFeature = "onboarding" | "offline" | "geometry" | "interactions" | "device" | null;
 
-const WEB_ORDER: WebFeature[] = ["collaboration", "analytics", "traceability"];
+const WEB_ORDER: WebFeature[] = ["collaboration", "analytics", "traceability", "distribution"];
 const MOBILE_ORDER: MobileFeature[] = ["offline", "onboarding", "interactions", "device"];
 
 // Real product screenshots for the web feature carousel, keyed by
@@ -28,6 +28,11 @@ const WEB_SHOTS: Record<Exclude<WebFeature, null>, { src: string; alt: string; p
     src: "/screenshots/web-traceability.webp",
     alt: "Shamba map showing farm plot boundaries over satellite imagery",
     path: "platform.shamba.com/map",
+  },
+  distribution: {
+    src: "/screenshots/web-distribution.webp",
+    alt: "Shamba input distribution: selecting products with prices to record a hand-out",
+    path: "platform.shamba.com/distribution",
   },
 };
 
@@ -481,6 +486,26 @@ export function ProductShowcase() {
                   <div>
                     <h4 className="font-semibold">Traceability</h4>
                     <p className="text-sm text-muted-foreground">Trace produce from the farm to the buyer</p>
+                  </div>
+                </button>
+
+                <button
+                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
+                    activeWebFeature === "distribution"
+                      ? "is-active border-transparent"
+                      : "hover:bg-muted/50 border-transparent"
+                  } hover:border-primary`}
+                  onMouseEnter={() => setActiveWebFeature("distribution")}
+                  onClick={() => setActiveWebFeature("distribution")}
+                >
+                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Input distribution</h4>
+                    <p className="text-sm text-muted-foreground">Record fertilizer and seed hand-outs to members</p>
                   </div>
                 </button>
               </div>
