@@ -1,4 +1,4 @@
-# Shamba.land Website
+# Shamba Website
 
 A geospatial smallholder CRM system website built with Next.js and Strapi CMS.
 

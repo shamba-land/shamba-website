@@ -1,7 +1,7 @@
 {
   "name": "shamba-website",
   "version": "1.0.0",
-  "description": "Shamba.land - Geospatial Smallholder CRM System",
+  "description": "Shamba - Geospatial Smallholder CRM System",
   "private": true,
   "workspaces": [
     "frontend",
