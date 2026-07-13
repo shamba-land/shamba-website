@@ -82,10 +82,10 @@ export function Header() {
           {isScrolled ? (
             <>
               <Button variant="outline" asChild className="hidden md:inline-flex bg-white hover:bg-primary/10 hover:text-primary">
-                <a href="#contact">Request Demo</a>
+                <a href="#contact">Request a demo</a>
               </Button>
               {/* Desktop: Open the live app. Mobile: surface a demo CTA
-                  instead — sending mobile visitors straight into the app
+                  instead, since sending mobile visitors straight into the app
                   without context tends to feel jarring. The /signup
                   deeplink lands unauthenticated visitors on the signup
                   flow; the app's auth guard sends already-signed-in
@@ -104,7 +104,7 @@ export function Header() {
                 asChild
                 className="hidden md:inline-flex bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white"
               >
-                <a href="#contact">Request Demo</a>
+                <a href="#contact">Request a demo</a>
               </Button>
               <Button asChild className="hidden md:inline-flex bg-white text-primary hover:bg-white/90">
                 <a href="https://platform.shamba.com/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>

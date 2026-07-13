@@ -39,7 +39,7 @@ export default function Home() {
                 What Shamba enables
               </h2>
               <p className="text-lg text-muted-foreground md:text-xl">
-                Why organizations use Shamba
+                Trust your data, trace your supply chains, and prove your impact.
               </p>
             </div>
 
@@ -190,10 +190,10 @@ export default function Home() {
           <div className="container relative">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-                Ready to scale impact?
+                Ready to modernize your field operations?
               </h2>
               <p className="text-lg text-muted-foreground mb-10 md:text-xl">
-                Request a demo to learn what Shamba can mean for your organization.
+                See how Shamba helps organizations manage farmers, improve data quality, and scale field programmes with confidence.
               </p>
               <DemoRequestForm />
             </div>

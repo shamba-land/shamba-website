@@ -28,21 +28,21 @@ export function Hero() {
           {/* Left side - Text content */}
           <div className="flex flex-col max-w-2xl">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-              Putting smallholders{" "}
+              Digital infrastructure for organizations working with{" "}
               <span className="text-white/90">
-                on the map
+                smallholder farmers
               </span>
             </h1>
 
             <p className="text-lg text-white/90 md:text-xl">
-              Shamba helps cooperatives, NGOs, and sustainability programs know their farmers, map their land, and prove their impact, all in one place.
+              Manage farmers, farms, field operations, and traceability in one offline-first platform built for cooperatives, agribusinesses, NGOs, and governments.
             </p>
           </div>
 
           {/* Right side - Buttons */}
           <div className="flex flex-col gap-4 md:flex-row md:items-end">
             <Button size="lg" className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90" asChild>
-              <a href="#contact">Request Demo</a>
+              <a href="#contact">Request a demo</a>
             </Button>
             <Button
               size="lg"
@@ -50,7 +50,7 @@ export function Hero() {
               className="text-lg px-8 py-6 bg-transparent text-white border-white/20 hover:bg-white/20 hover:text-white"
               asChild
             >
-              <a href="#products">Learn More</a>
+              <a href="#platform">Explore the platform</a>
             </Button>
           </div>
         </div>
