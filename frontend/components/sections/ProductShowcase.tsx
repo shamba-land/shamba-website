@@ -894,7 +894,9 @@ export function ProductShowcase() {
             <ScrollReveal delay={200} className="order-1 lg:order-2">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-light/20 rounded-xl blur-2xl group-hover:blur-3xl transition-all" />
-                <div className="relative bg-card border-2 border-border rounded-xl overflow-hidden shadow-hard-lg">
+                {/* bg-background, not bg-card: this is an illustration backdrop —
+                    the white mock-UI tiles inside need the warm tone behind them */}
+                <div className="relative bg-background border-2 border-border rounded-xl overflow-hidden shadow-hard-lg">
                   {/* Browser chrome */}
                   <div className="bg-muted/50 border-b border-border px-4 py-3 flex items-center gap-2">
                     <div className="flex gap-1.5">
@@ -929,7 +931,7 @@ export function ProductShowcase() {
                   <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all" />
                   <div className="relative">
                     {/* Phone frame */}
-                    <div className="relative bg-card border-4 border-foreground/10 rounded-[2.5rem] overflow-hidden shadow-hard-lg p-2">
+                    <div className="relative bg-background border-4 border-foreground/10 rounded-[2.5rem] overflow-hidden shadow-hard-lg p-2">
                       {/* Notch */}
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-foreground/10 rounded-b-2xl z-10" />
 
