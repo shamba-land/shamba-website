@@ -405,10 +405,10 @@ export function ProductShowcase() {
             <span className="text-xs font-semibold text-white uppercase tracking-wider">Platform Overview</span>
           </div>
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-            Everything your field teams need. One platform.
+            One platform to manage your farmer network
           </h2>
           <p className="text-lg text-muted-foreground md:text-xl">
-            From farmer registration and GPS mapping to data quality, programme management, procurement, and compliance, Shamba connects every step of your field operations.
+            Coordinate from the web, and capture data offline in the field.
           </p>
         </div>
 
@@ -592,7 +592,7 @@ export function ProductShowcase() {
                 Designed for the field
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
-                Collect data anywhere, even without internet. Shamba automatically synchronizes when connectivity returns, so field teams can keep working.
+                Field teams collect on a simple app that syncs when back online.
               </p>
 
               {/* Features */}

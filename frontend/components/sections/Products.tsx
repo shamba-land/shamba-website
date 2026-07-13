@@ -20,7 +20,7 @@ export function Products() {
             <span className="text-xs font-semibold text-white uppercase tracking-wider">Who it&apos;s for</span>
           </div>
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-            Built for organizations serving smallholder farmers
+            Built for smallholder organizations
           </h2>
           <p className="text-lg text-muted-foreground">
             Cooperatives, agribusinesses, NGOs, and governments, all working from one shared record.

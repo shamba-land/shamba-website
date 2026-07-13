@@ -190,10 +190,10 @@ export default function Home() {
           <div className="container relative">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-                Ready to modernize your field operations?
+                Ready to scale impact?
               </h2>
               <p className="text-lg text-muted-foreground mb-10 md:text-xl">
-                See how Shamba helps organizations manage farmers, improve data quality, and scale field programmes with confidence.
+                Request a demo to learn what Shamba can mean for your organization.
               </p>
               <DemoRequestForm />
             </div>
