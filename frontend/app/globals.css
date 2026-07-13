@@ -84,16 +84,13 @@ html {
 
   /* Shamba Color System using oklch */
   /* Background: Warm earthy off-white - NGO/agricultural feel */
-  --background: oklch(0.97 0.015 70);
+  --background: oklch(.98 .012 72);
   /* Text: Charcoal #1E1E1E */
   --foreground: oklch(0.15 0 0);
 
-  /* Card: Warm off-white with earth tone — softer feel than the
-   * pure-white surface used inside the app. The marketing site is
-   * read-only, mostly hero/feature blocks, where a touch of warmth
-   * reads as inviting; the app uses pure white so dense data UI
-   * stays crisp. Both sides land on the same warm `--background`. */
-  --card: oklch(0.98 0.012 72);
+  /* Card: Pure white — crisp surfaces that lift off the warm
+   * `--background`, matching the app's pure-white data UI. */
+  --card: oklch(1 0 0);
   --card-foreground: oklch(0.15 0 0);
 
   /* Popover: Warm sand */

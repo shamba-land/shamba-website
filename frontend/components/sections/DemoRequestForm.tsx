@@ -58,7 +58,7 @@ export function DemoRequestForm() {
           name="email"
           placeholder="Enter your email address"
           required
-          className="h-auto flex-1 text-base px-5 py-4 bg-background/80 border-2 border-border focus:border-primary"
+          className="h-auto flex-1 text-base px-5 py-4 bg-white border-2 border-border focus:border-primary"
           disabled={isPending}
         />
         <Button
