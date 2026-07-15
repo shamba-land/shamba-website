@@ -75,14 +75,21 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-white/60">
-            &copy; {new Date().getFullYear()} Shamba B.V. All rights reserved.
+            &copy; {new Date().getFullYear()} Shamba &middot; KvK 72367334
           </p>
-          <a
-            href="https://github.com/shamba-land"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
-          >
+          <div className="flex items-center gap-6 text-sm">
+            <Link href="/terms" className="text-white/70 transition-colors hover:text-white">
+              Terms
+            </Link>
+            <Link href="/privacy" className="text-white/70 transition-colors hover:text-white">
+              Privacy
+            </Link>
+            <a
+              href="https://github.com/shamba-land"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-white/70 transition-colors hover:text-white"
+            >
             <svg
               className="h-5 w-5"
               fill="currentColor"
@@ -95,8 +102,9 @@ export function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-            <span className="sr-only">GitHub</span>
-          </a>
+              <span className="sr-only">GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
