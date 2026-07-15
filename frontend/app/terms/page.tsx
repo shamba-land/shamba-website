@@ -33,9 +33,8 @@ export default function TermsPage() {
                 </h2>
                 <p className="leading-relaxed text-muted-foreground">
                   These Terms of Service (&quot;Terms&quot;) are entered into
-                  between you and Axiom Analytics, a Dutch sole proprietorship
-                  (eenmanszaak) that operates the Shamba platform
-                  (&quot;Shamba&quot;, &quot;we&quot;, &quot;us&quot;, or
+                  between you and Axiom Analytics, which operates the Shamba
+                  platform (&quot;Shamba&quot;, &quot;we&quot;, &quot;us&quot;, or
                   {" "}&quot;our&quot;). Axiom Analytics is registered with the
                   Netherlands Chamber of Commerce under number 72367334 and has
                   its business address at Lijndenstraat 26D, 1018 NV Amsterdam,

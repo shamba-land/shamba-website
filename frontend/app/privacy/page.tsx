@@ -42,8 +42,7 @@ export default function PrivacyPage() {
                   Shamba.
                 </p>
                 <p className="leading-relaxed text-muted-foreground">
-                  Shamba is currently operated by Axiom Analytics, a Dutch sole
-                  proprietorship (eenmanszaak)
+                  Shamba is currently operated by Axiom Analytics
                   {" "}(&quot;Shamba&quot;, &quot;we&quot;, &quot;us&quot;, or
                   {" "}&quot;our&quot;). Axiom Analytics is registered with the
                   Netherlands Chamber of Commerce (KvK) under number 72367334 and
@@ -319,8 +318,8 @@ export default function PrivacyPage() {
                 </h3>
                 <p className="leading-relaxed text-muted-foreground">
                   If the business operating Shamba is transferred, including a
-                  transfer of the Axiom Analytics sole proprietorship to a newly
-                  formed company, data may transfer as part of that business. We
+                  transfer of the Axiom Analytics business to a newly formed
+                  company, data may transfer as part of that business. We
                   will provide notice and ensure the receiving entity is bound by
                   equivalent protections.
                 </p>
