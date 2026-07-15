@@ -22,7 +22,7 @@ export default function TermsPage() {
                 Terms of Service
               </h1>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Last updated: July 15, 2026
+                Last updated: July 16, 2026
               </p>
             </div>
 
@@ -87,8 +87,9 @@ export default function TermsPage() {
                     Customer-specific terms.
                   </li>
                   <li>
-                    <strong>DPA:</strong> the data processing agreement that governs
-                    our processing of personal data on the Customer&apos;s behalf.
+                    <strong>Data Processing Terms:</strong> the data processing
+                    terms in Annex 1, which apply where Shamba processes personal
+                    data on the Customer&apos;s behalf.
                   </li>
                   <li>
                     <strong>Agreement:</strong> the documents listed in Section 3,
@@ -108,10 +109,10 @@ export default function TermsPage() {
                 </p>
                 <ol className="list-decimal space-y-2 pl-6 text-muted-foreground">
                   <li>any signed Order Form or customer agreement;</li>
-                  <li>the DPA, for questions of personal data protection;</li>
+                  <li>the Data Processing Terms in Annex 1, for questions of personal data protection;</li>
                   <li>any service-specific terms or service level agreement;</li>
                   <li>these Terms;</li>
-                  <li>the Acceptable Use provisions in Section 8.</li>
+                  <li>the Acceptable Use provisions in Section 7.</li>
                 </ol>
                 <p className="leading-relaxed text-muted-foreground">
                   Our{" "}
@@ -122,8 +123,9 @@ export default function TermsPage() {
                     Privacy Policy
                   </Link>{" "}
                   is a transparency notice. It is not the contractual basis for
-                  processing and does not override negotiated terms. The DPA and
-                  Order Form are made available before the Agreement is concluded.
+                  processing and does not override negotiated terms. These Terms,
+                  including Annex 1, are made available before acceptance. Where an
+                  Order Form applies, it is provided or agreed separately.
                 </p>
               </section>
 
@@ -144,6 +146,14 @@ export default function TermsPage() {
                   The exact features made available are set out in the applicable
                   plan or Order Form. We may add, change, or retire individual
                   features as the product evolves, subject to Section 15.
+                </p>
+                <p className="leading-relaxed text-muted-foreground">
+                  Subject to the Agreement, Shamba grants the Customer a limited,
+                  non-exclusive, non-transferable right, during the applicable term,
+                  to permit its Authorized Users, and contractors acting on the
+                  Customer&apos;s behalf, to access and use the Services for the
+                  Customer&apos;s internal organizational and programme activities.
+                  This right may be assigned only as permitted in Section 20.
                 </p>
               </section>
 
@@ -303,11 +313,12 @@ export default function TermsPage() {
                 </h2>
                 <p className="leading-relaxed text-muted-foreground">
                   Where we process personal data on behalf of the Customer, we do so
-                  as a processor under the DPA, which forms part of the Agreement
-                  and covers instructions, confidentiality, security,
-                  subprocessors, international transfers, assistance with individual
-                  rights, incident notification, deletion or return of data, and
-                  audits. Our own processing as a controller is described in the{" "}
+                  as a processor under the Data Processing Terms in Annex 1, which
+                  form part of the Agreement and cover instructions, confidentiality,
+                  security, subprocessors, international transfers, assistance with
+                  individual rights, incident notification, deletion or return of
+                  data, and audits. Our own processing as a controller is described
+                  in the{" "}
                   <Link
                     href="/privacy"
                     className="text-primary underline-offset-4 transition-colors duration-200 hover:text-primary/90 hover:underline"
@@ -387,11 +398,13 @@ export default function TermsPage() {
                 </h2>
                 <p className="leading-relaxed text-muted-foreground">
                   Some Services may be offered free of charge and others for a fee.
-                  Fees, currency, billing periods, and payment terms for paid
-                  Services are set out in the applicable Order Form. Unless the
-                  Order Form states otherwise, fees are exclusive of applicable
-                  taxes, invoices are payable within the stated period, and
-                  subscriptions renew for successive terms unless cancelled.
+                  The subscription term, renewal arrangements, fees, currency,
+                  billing periods, and cancellation procedure for paid Services are
+                  set out in the applicable Order Form. Unless the Order Form states
+                  otherwise, fees are exclusive of applicable taxes and invoices are
+                  payable within the stated period. Unless the Order Form expressly
+                  provides for automatic renewal, a subscription does not
+                  automatically renew.
                 </p>
                 <p className="leading-relaxed text-muted-foreground">
                   Free Services and free tiers are provided without a commitment to
@@ -486,12 +499,17 @@ export default function TermsPage() {
                 <p className="leading-relaxed text-muted-foreground">
                   We will defend the Customer against third-party claims that the
                   Shamba software, as provided by us, infringes a third
-                  party&apos;s intellectual property rights, subject to customary
-                  remedies and exclusions. In each case the indemnified party will
-                  give prompt notice, allow the indemnifying party to control the
-                  defence, cooperate reasonably, and not settle in a way that admits
-                  fault or imposes obligations without consent. Each party will take
-                  reasonable steps to mitigate.
+                  party&apos;s intellectual property rights. If such a claim arises,
+                  we may, at our option, obtain the right for the Customer to keep
+                  using the Services, modify or replace the affected functionality,
+                  or terminate it and refund prepaid, unused fees for it. This
+                  indemnity does not cover claims arising from Customer
+                  modifications, Customer Data, a combination with items we did not
+                  supply, or continued use after we have given notice to stop. In
+                  each case the indemnified party will give prompt notice, allow the
+                  indemnifying party to control the defence, cooperate reasonably,
+                  and not settle in a way that admits fault or imposes obligations
+                  without consent. Each party will take reasonable steps to mitigate.
                 </p>
               </section>
 
@@ -505,8 +523,11 @@ export default function TermsPage() {
                   paid functionality, or as provided in an Order Form. We may
                   terminate for an uncured material breach, for non-payment after
                   notice, immediately for serious security or unlawful use, or if
-                  continuing to provide the Services becomes unlawful. Free Services
-                  may be terminated by either party on reasonable notice.
+                  continuing to provide the Services becomes unlawful. We may
+                  discontinue a generally available free plan on at least 30
+                  days&apos; notice, with an opportunity to export data, except
+                  where immediate action is reasonably required for security,
+                  unlawful use, or legal compliance.
                 </p>
                 <p className="leading-relaxed text-muted-foreground">
                   On termination, access is deactivated, outstanding fees remain
@@ -534,7 +555,10 @@ export default function TermsPage() {
                   have at least 30 calendar days after the transition to retrieve
                   its data, after which we erase it. Any switching charges will not
                   exceed the costs directly related to switching, and from 12
-                  January 2027 we will not impose switching charges.
+                  January 2027 we will not impose switching charges. The categories
+                  of exportable data and the formats we can provide are set out in
+                  Annex 2. Some obligations under the EU Data Act may not apply to a
+                  strictly limited-duration, non-production test service.
                 </p>
               </section>
 
@@ -677,6 +701,184 @@ export default function TermsPage() {
                     </Link>
                   </p>
                 </div>
+              </section>
+
+              <section className="mt-4 border-t border-border pt-10">
+                <h2 className="mb-3 text-2xl font-bold tracking-tight text-foreground">
+                  Annex 1: Data Processing Terms
+                </h2>
+                <p className="leading-relaxed text-muted-foreground">
+                  These Data Processing Terms apply where Shamba processes personal
+                  data on behalf of the Customer in providing the Services. For that
+                  processing the Customer is the controller and Shamba is the
+                  processor, and these terms are the parties&apos; agreement under
+                  Article 28 GDPR. They form part of the Agreement.
+                </p>
+
+                <h3 className="mb-2 mt-5 text-lg font-medium text-foreground">
+                  1. Subject matter, nature, and purpose
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  We process personal data only to provide, secure, maintain, and
+                  support the Services and to perform our obligations under the
+                  Agreement, on the Customer&apos;s instructions.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  2. Duration
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  Processing continues for the term of the Agreement and any period
+                  needed to return or delete the data as set out below.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  3. Personal data and data subjects
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  The personal data may include account and identity data, and the
+                  farmer, participant, geospatial, and field-collected data described
+                  in our Privacy Policy. The data subjects may include the
+                  Customer&apos;s Authorized Users and the farmers, members, and
+                  participants whose information the Customer records.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  4. Our instructions
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  We process personal data only on the Customer&apos;s documented
+                  instructions, including those in the Agreement, unless required by
+                  law, in which case we will inform the Customer unless the law
+                  prohibits it. We will tell the Customer if we consider that an
+                  instruction infringes data protection law.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  5. Confidentiality
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  The people we authorize to process personal data are bound by a
+                  duty of confidentiality.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  6. Security
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  We implement appropriate technical and organizational measures to
+                  protect personal data, taking into account the risks. The measures
+                  are summarized in Section 13 of this Annex.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  7. Subprocessors
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  The Customer gives general authorization for us to engage
+                  subprocessors to provide the Services. We impose data protection
+                  obligations on them equivalent to these terms, remain responsible
+                  for their performance, and give advance notice of any new or
+                  replacement subprocessor so the Customer can object on reasonable
+                  data protection grounds.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  8. Data subject rights
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  Taking into account the nature of the processing, we assist the
+                  Customer with appropriate measures to respond to requests from
+                  individuals exercising their rights.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  9. Assistance
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  We assist the Customer, taking into account the information
+                  available to us, with security, personal data breach notification,
+                  data protection impact assessments, and prior consultation with a
+                  supervisory authority.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  10. Personal data breach
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  We notify the Customer without undue delay after becoming aware of
+                  a personal data breach affecting Customer personal data, with the
+                  information the Customer reasonably needs to meet its own
+                  obligations.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  11. Return or deletion
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  At the Customer&apos;s choice, we delete or return Customer personal
+                  data at the end of the Services and delete existing copies, unless
+                  we are required by law to keep them. Data in routine backups is
+                  deleted as those backups expire.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  12. Audits
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  We make available the information reasonably necessary to
+                  demonstrate compliance with these terms and allow for and
+                  contribute to audits, subject to reasonable notice, confidentiality,
+                  and frequency.
+                </p>
+
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  13. International transfers and security measures
+                </h3>
+                <p className="leading-relaxed text-muted-foreground">
+                  We process personal data primarily within the EEA. Where a transfer
+                  outside the EEA occurs, we rely on appropriate safeguards such as
+                  the European Commission&apos;s Standard Contractual Clauses, as
+                  described in our Privacy Policy. Our security measures include
+                  encryption of data in transit and at rest, access controls and
+                  authentication, least-privilege access, logging and monitoring,
+                  backups, vendor due diligence, and incident-response procedures.
+                </p>
+              </section>
+
+              <section className="mt-4 border-t border-border pt-10">
+                <h2 className="mb-3 text-2xl font-bold tracking-tight text-foreground">
+                  Annex 2: Data Portability
+                </h2>
+                <p className="leading-relaxed text-muted-foreground">
+                  This Annex describes the Customer data we can export under Section
+                  19. We provide only the categories and formats we can genuinely
+                  export; some derived or internal operational data may not be
+                  exportable.
+                </p>
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  Exportable data
+                </h3>
+                <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
+                  <li>Organization, workspace, and user records</li>
+                  <li>Farmer and participant records</li>
+                  <li>Farm and plot attributes</li>
+                  <li>Plot geometries and coordinates</li>
+                  <li>Survey responses</li>
+                  <li>Training and activity records</li>
+                  <li>Distribution and purchase records</li>
+                  <li>Uploaded files and photographs, where technically exportable</li>
+                  <li>Identifiers and metadata needed to interpret the above</li>
+                </ul>
+                <h3 className="mb-2 mt-4 text-lg font-medium text-foreground">
+                  Formats
+                </h3>
+                <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
+                  <li>CSV for tabular records</li>
+                  <li>GeoJSON for geometries</li>
+                  <li>ZIP archives for files and images</li>
+                  <li>JSON for structured metadata where needed</li>
+                </ul>
               </section>
             </div>
           </div>

@@ -22,7 +22,7 @@ export default function PrivacyPage() {
                 Privacy Policy
               </h1>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Last updated: July 15, 2026
+                Last updated: July 16, 2026
               </p>
             </div>
 
@@ -71,8 +71,9 @@ export default function PrivacyPage() {
                     plots, and programmes, that Customer is the controller. It
                     decides why and how the data is processed. We process that
                     data (the &quot;Customer Data&quot;) on the Customer&apos;s
-                    documented instructions under a data processing agreement. We
-                    do not decide the purposes of that processing.
+                    documented instructions under the Data Processing Terms in
+                    Annex 1 to our Terms of Service. We do not decide the purposes
+                    of that processing.
                   </li>
                   <li>
                     <strong>As a controller.</strong> For a limited set of data we
@@ -206,7 +207,7 @@ export default function PrivacyPage() {
                       <tr>
                         <td>Hosting and managing farmer, plot, and programme records for a Customer</td>
                         <td>Customer Data</td>
-                        <td>The Customer&apos;s own basis under a data processing agreement; we process on its instructions</td>
+                        <td>The Customer&apos;s own basis; we process on its instructions under the Data Processing Terms (Annex 1 to our Terms)</td>
                         <td>Processor</td>
                       </tr>
                       <tr>
@@ -345,7 +346,7 @@ export default function PrivacyPage() {
                   A current list of named subprocessors is available to Customers on
                   request. We will give Customers advance notice of a new or
                   replacement subprocessor so that they can object, as set out in
-                  the data processing agreement.
+                  the Data Processing Terms in Annex 1 to our Terms of Service.
                 </p>
               </section>
 
@@ -403,9 +404,9 @@ export default function PrivacyPage() {
                 <p className="leading-relaxed text-muted-foreground">
                   Where we are a processor, we retain Customer Data for the duration
                   of the Customer&apos;s use of the Services and, after the
-                  agreement ends, we return or delete it in line with the data
-                  processing agreement, subject to a short period for backups to
-                  expire.
+                  agreement ends, we return or delete it in line with the Data
+                  Processing Terms in Annex 1 to our Terms of Service, subject to a
+                  short period for backups to expire.
                 </p>
               </section>
 
