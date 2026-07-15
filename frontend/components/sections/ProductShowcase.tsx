@@ -8,7 +8,15 @@ import { GeoDecorations } from "@/components/ui/GeoDecorations";
 type WebFeature = "collaboration" | "analytics" | "traceability" | "distribution" | null;
 type MobileFeature = "onboarding" | "offline" | "geometry" | "interactions" | "device" | null;
 
-const WEB_ORDER: WebFeature[] = ["collaboration", "analytics", "traceability", "distribution"];
+// Web feature buttons + carousel order. Traceability (the satellite
+// map) leads so the section opens on the map.
+const WEB_FEATURES: { key: Exclude<WebFeature, null>; title: string; desc: string }[] = [
+  { key: "traceability", title: "Traceability", desc: "Trace produce from the farm to the buyer" },
+  { key: "collaboration", title: "Project management", desc: "Run your whole farmer network from one overview" },
+  { key: "analytics", title: "Impact reporting", desc: "Generate reports funders and buyers trust" },
+  { key: "distribution", title: "Input distribution", desc: "Record fertilizer and seed hand-outs to members" },
+];
+const WEB_ORDER: WebFeature[] = WEB_FEATURES.map((f) => f.key);
 const MOBILE_ORDER: MobileFeature[] = ["offline", "onboarding", "interactions", "device"];
 
 // Real product screenshots for the web feature carousel, keyed by
@@ -374,7 +382,7 @@ function DeviceVisualization({ isActive }: { isActive: boolean }) {
 }
 
 export function ProductShowcase() {
-  const [activeWebFeature, setActiveWebFeature] = useState<WebFeature>("collaboration");
+  const [activeWebFeature, setActiveWebFeature] = useState<WebFeature>("traceability");
   const [activeMobileFeature, setActiveMobileFeature] = useState<MobileFeature>("onboarding");
   const [paused, setPaused] = useState(false);
   useEffect(() => {
@@ -429,85 +437,28 @@ export function ProductShowcase() {
 
               {/* Features */}
               <div className="space-y-4">
-                <button
-                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
-                    activeWebFeature === "collaboration"
-                      ? "is-active border-transparent"
-                      : "hover:bg-muted/50 border-transparent"
-                  } hover:border-primary`}
-                  onMouseEnter={() => setActiveWebFeature("collaboration")}
-                  onClick={() => setActiveWebFeature("collaboration")}
-                >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Project management</h4>
-                    <p className="text-sm text-muted-foreground">Run your whole farmer network from one overview</p>
-                  </div>
-                </button>
-
-                <button
-                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
-                    activeWebFeature === "analytics"
-                      ? "is-active border-transparent"
-                      : "hover:bg-muted/50 border-transparent"
-                  } hover:border-primary`}
-                  onMouseEnter={() => setActiveWebFeature("analytics")}
-                  onClick={() => setActiveWebFeature("analytics")}
-                >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Impact reporting</h4>
-                    <p className="text-sm text-muted-foreground">Generate reports funders and buyers trust</p>
-                  </div>
-                </button>
-
-                <button
-                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
-                    activeWebFeature === "traceability"
-                      ? "is-active border-transparent"
-                      : "hover:bg-muted/50 border-transparent"
-                  } hover:border-primary`}
-                  onMouseEnter={() => setActiveWebFeature("traceability")}
-                  onClick={() => setActiveWebFeature("traceability")}
-                >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Traceability</h4>
-                    <p className="text-sm text-muted-foreground">Trace produce from the farm to the buyer</p>
-                  </div>
-                </button>
-
-                <button
-                  className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
-                    activeWebFeature === "distribution"
-                      ? "is-active border-transparent"
-                      : "hover:bg-muted/50 border-transparent"
-                  } hover:border-primary`}
-                  onMouseEnter={() => setActiveWebFeature("distribution")}
-                  onClick={() => setActiveWebFeature("distribution")}
-                >
-                  <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Input distribution</h4>
-                    <p className="text-sm text-muted-foreground">Record fertilizer and seed hand-outs to members</p>
-                  </div>
-                </button>
+                {WEB_FEATURES.map((f) => (
+                  <button
+                    key={f.key}
+                    className={`group w-full flex gap-3 p-3 rounded-lg text-left transition-all border ${
+                      activeWebFeature === f.key
+                        ? "is-active border-transparent"
+                        : "hover:bg-muted/50 border-transparent"
+                    } hover:border-primary`}
+                    onMouseEnter={() => setActiveWebFeature(f.key)}
+                    onClick={() => setActiveWebFeature(f.key)}
+                  >
+                    <div className="shrink-0 w-6 h-6 rounded-md bg-muted group-[.is-active]:bg-primary flex items-center justify-center mt-0.5">
+                      <svg className="w-4 h-4 text-muted-foreground group-[.is-active]:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">{f.title}</h4>
+                      <p className="text-sm text-muted-foreground">{f.desc}</p>
+                    </div>
+                  </button>
+                ))}
               </div>
             </ScrollReveal>
 
@@ -524,7 +475,7 @@ export function ProductShowcase() {
                       <div className="w-3 h-3 rounded-full bg-green-400/60" />
                     </div>
                     <div className="flex-1 mx-4 bg-background/50 rounded px-3 py-1 text-xs text-muted-foreground">
-                      {WEB_SHOTS[activeWebFeature ?? "collaboration"].path}
+                      {WEB_SHOTS[activeWebFeature ?? "traceability"].path}
                     </div>
                   </div>
 
@@ -533,7 +484,7 @@ export function ProductShowcase() {
                     {WEB_ORDER.map((key) => {
                       const feature = key as Exclude<WebFeature, null>;
                       const shot = WEB_SHOTS[feature];
-                      const isActive = (activeWebFeature ?? "collaboration") === feature;
+                      const isActive = (activeWebFeature ?? "traceability") === feature;
                       return (
                         <Image
                           key={feature}
