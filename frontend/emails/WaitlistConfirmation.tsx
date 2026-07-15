@@ -240,7 +240,7 @@ export function WaitlistConfirmation({ email }: WaitlistConfirmationProps) {
               margin: 0,
             }}
           >
-            &copy; {new Date().getFullYear()} Shamba B.V. All rights reserved.
+            &copy; {new Date().getFullYear()} Shamba. All rights reserved.
             <br />
             You&apos;re receiving this because you requested a demo at{" "}
             <Link

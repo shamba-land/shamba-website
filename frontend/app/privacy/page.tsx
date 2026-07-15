@@ -466,9 +466,6 @@ export default function PrivacyPage() {
                   <p className="text-muted-foreground">
                     Email: privacy@shamba.com
                   </p>
-                  <p className="text-muted-foreground">
-                    Chamber of Commerce (KvK): 72367334
-                  </p>
                 </div>
               </section>
 
