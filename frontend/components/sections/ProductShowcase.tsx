@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { GeoDecorations } from "@/components/ui/GeoDecorations";
 
-type WebFeature = "collaboration" | "analytics" | "traceability" | "distribution" | null;
+type WebFeature = "collaboration" | "certification" | "traceability" | "distribution" | null;
 type MobileFeature = "onboarding" | "offline" | "geometry" | "interactions" | "device" | null;
 
 // Web feature buttons + carousel order. Traceability (the satellite
@@ -13,7 +13,7 @@ type MobileFeature = "onboarding" | "offline" | "geometry" | "interactions" | "d
 const WEB_FEATURES: { key: Exclude<WebFeature, null>; title: string; desc: string }[] = [
   { key: "traceability", title: "Traceability", desc: "Trace produce from the farm to the buyer" },
   { key: "collaboration", title: "Project management", desc: "Run your whole farmer network from one overview" },
-  { key: "analytics", title: "Impact reporting", desc: "Generate reports funders and buyers trust" },
+  { key: "certification", title: "Sustainability certification", desc: "Copy certifier-aligned survey templates for audits" },
   { key: "distribution", title: "Input distribution", desc: "Record fertilizer and seed hand-outs to members" },
 ];
 const WEB_ORDER: WebFeature[] = WEB_FEATURES.map((f) => f.key);
@@ -27,10 +27,10 @@ const WEB_SHOTS: Record<Exclude<WebFeature, null>, { src: string; alt: string; p
     alt: "Shamba dashboard: farms, farmers, plots, and recent field activity for a cooperative",
     path: "platform.shamba.com/dashboard",
   },
-  analytics: {
-    src: "/screenshots/web-impact.webp",
-    alt: "Shamba impact reporting with farm, farmer, area, and consent statistics",
-    path: "platform.shamba.com/statistics",
+  certification: {
+    src: "/screenshots/web-certification.webp",
+    alt: "Shamba surveys: certifier-aligned templates for Fairtrade, Rainforest Alliance, World Bank, and EUDR",
+    path: "platform.shamba.com/surveys",
   },
   traceability: {
     src: "/screenshots/web-traceability.webp",
