@@ -1,7 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/login",
+        destination: "https://platform.shamba.com/login",
+        permanent: true,
+      },
+      {
+        source: "/signup",
+        destination: "https://platform.shamba.com/signup",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
