@@ -32,9 +32,6 @@ export default function Home() {
 
           <div className="container relative">
             <div className="mx-auto max-w-3xl text-center mb-16">
-              <div className="mb-4 inline-flex items-center rounded-full bg-[oklch(0.55_0.15_240)] px-4 py-1.5">
-                <span className="text-xs font-semibold text-white uppercase tracking-wider">Benefits</span>
-              </div>
               <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
                 What Shamba enables
               </h2>
