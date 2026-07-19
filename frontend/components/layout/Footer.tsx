@@ -75,7 +75,8 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-white/60">
-            &copy; {new Date().getFullYear()} Shamba. All rights reserved.
+            &copy; {new Date().getFullYear()} Shamba, a trade name of Axiom
+            Analytics (KvK 72367334). All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
             <Link href="/terms" className="text-white/70 transition-colors hover:text-white">
