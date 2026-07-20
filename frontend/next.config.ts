@@ -8,11 +8,6 @@ const nextConfig: NextConfig = {
         destination: "https://platform.shamba.com/login",
         permanent: true,
       },
-      {
-        source: "/signup",
-        destination: "https://platform.shamba.com/signup",
-        permanent: true,
-      },
     ];
   },
 };
