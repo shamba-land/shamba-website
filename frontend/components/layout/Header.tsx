@@ -89,17 +89,11 @@ export function Header({ solid = false }: { solid?: boolean }) {
               <Button variant="outline" asChild className="hidden md:inline-flex bg-white hover:bg-primary/10 hover:text-primary">
                 <Link href="/#contact">Request a demo</Link>
               </Button>
-              {/* Desktop: Open the live app. Mobile: surface a demo CTA
-                  instead, since sending mobile visitors straight into the app
-                  without context tends to feel jarring. The /signup
-                  deeplink lands unauthenticated visitors on the signup
-                  flow; the app's auth guard sends already-signed-in
-                  users to their home. */}
               <Button asChild className="hidden md:inline-flex">
-                <a href="https://platform.shamba.com/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
+                <a href="https://platform.shamba.com/login" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
               <Button asChild className="md:hidden">
-                <a href="https://platform.shamba.com/signup" target="_blank" rel="noopener noreferrer">Sign up</a>
+                <a href="https://platform.shamba.com/login" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
             </>
           ) : (
@@ -112,10 +106,10 @@ export function Header({ solid = false }: { solid?: boolean }) {
                 <Link href="/#contact">Request a demo</Link>
               </Button>
               <Button asChild className="hidden md:inline-flex bg-white text-primary hover:bg-white/90">
-                <a href="https://platform.shamba.com/signup" target="_blank" rel="noopener noreferrer">Open Shamba</a>
+                <a href="https://platform.shamba.com/login" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
               <Button asChild className="md:hidden bg-white text-primary hover:bg-white/90">
-                <a href="https://platform.shamba.com/signup" target="_blank" rel="noopener noreferrer">Sign up</a>
+                <a href="https://platform.shamba.com/login" target="_blank" rel="noopener noreferrer">Open Shamba</a>
               </Button>
             </>
           )}
