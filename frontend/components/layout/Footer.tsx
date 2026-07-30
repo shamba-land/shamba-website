@@ -79,11 +79,19 @@ export function Footer() {
             Analytics (KvK 72367334). All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
-            <Link href="/terms" className="text-white/70 transition-colors hover:text-white">
-              Terms
-            </Link>
+            <a
+              href="https://status.shamba.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 transition-colors hover:text-white"
+            >
+              Status
+            </a>
             <Link href="/privacy" className="text-white/70 transition-colors hover:text-white">
               Privacy
+            </Link>
+            <Link href="/terms" className="text-white/70 transition-colors hover:text-white">
+              Terms
             </Link>
             <a
               href="https://github.com/shamba-land"
