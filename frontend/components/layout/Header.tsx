@@ -87,7 +87,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
           {showSolid ? (
             <>
               <Button variant="outline" asChild className="hidden md:inline-flex bg-white hover:bg-primary/10 hover:text-primary">
-                <Link href="/#contact">Request a demo</Link>
+                <a href="https://demo.shamba.com" target="_blank" rel="noopener noreferrer">Start demo</a>
               </Button>
               <Button asChild className="hidden md:inline-flex">
                 <a href="https://platform.shamba.com/login" target="_blank" rel="noopener noreferrer">Open Shamba</a>
@@ -103,7 +103,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
                 asChild
                 className="hidden md:inline-flex bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white"
               >
-                <Link href="/#contact">Request a demo</Link>
+                <a href="https://demo.shamba.com" target="_blank" rel="noopener noreferrer">Start demo</a>
               </Button>
               <Button asChild className="hidden md:inline-flex bg-white text-primary hover:bg-white/90">
                 <a href="https://platform.shamba.com/login" target="_blank" rel="noopener noreferrer">Open Shamba</a>

@@ -52,6 +52,16 @@ export function Footer() {
                   Features
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://demo.shamba.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 transition-colors hover:text-white"
+                >
+                  Start demo
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -64,7 +74,7 @@ export function Footer() {
                   href="#contact"
                   className="text-white/70 transition-colors hover:text-white"
                 >
-                  Request a Demo
+                  Contact
                 </a>
               </li>
             </ul>

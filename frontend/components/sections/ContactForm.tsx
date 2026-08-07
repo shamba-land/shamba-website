@@ -3,13 +3,16 @@
 import { useActionState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { requestDemo, type DemoRequestState } from "@/app/actions/demo-request";
+import {
+  submitContactRequest,
+  type ContactRequestState,
+} from "@/app/actions/contact-request";
 
-export function DemoRequestForm() {
+export function ContactForm() {
   const [state, formAction, isPending] = useActionState<
-    DemoRequestState,
+    ContactRequestState,
     FormData
-  >(requestDemo, null);
+  >(submitContactRequest, null);
 
   if (state?.success) {
     return (
@@ -29,7 +32,7 @@ export function DemoRequestForm() {
             />
           </svg>
           <p className="text-lg font-semibold text-foreground">
-            Demo request received
+            Thanks for reaching out
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
             Check your inbox for a confirmation. We&apos;ll be in touch shortly.
@@ -67,7 +70,7 @@ export function DemoRequestForm() {
           className="text-base px-8 py-4 h-auto whitespace-nowrap"
           disabled={isPending}
         >
-          {isPending ? "Sending..." : "Request Demo"}
+          {isPending ? "Sending..." : "Get in touch"}
         </Button>
       </form>
       {state?.success === false && (

@@ -35,14 +35,14 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-white/90 md:text-xl">
-              Manage farmers, farms, field operations, and traceability in one offline-first platform built for cooperatives, agribusinesses, NGOs, and governments.
+              Manage farmers, farms, field operations, and traceability in one offline-first platform built for cooperatives, agribusinesses, and NGOs.
             </p>
           </div>
 
           {/* Right side - Buttons */}
           <div className="flex flex-col gap-4 md:flex-row md:items-end">
             <Button size="lg" className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90" asChild>
-              <a href="#contact">Request a demo</a>
+              <a href="https://demo.shamba.com" target="_blank" rel="noopener noreferrer">Start demo</a>
             </Button>
             <Button
               size="lg"
