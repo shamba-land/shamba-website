@@ -20,7 +20,7 @@ export function Products() {
             Built for smallholder organizations
           </h2>
           <p className="text-lg text-muted-foreground">
-            Cooperatives, agribusinesses, NGOs, and governments, all working from one shared record.
+            Cooperatives, agribusinesses, and NGOs, all working from one shared record.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export function Products() {
         {/* CTA */}
         <div className="text-center">
           <Button size="lg" asChild>
-            <a href="#contact">Request a Demo</a>
+            <a href="https://demo.shamba.com" target="_blank" rel="noopener noreferrer">Start demo</a>
           </Button>
         </div>
       </div>

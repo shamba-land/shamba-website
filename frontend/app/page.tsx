@@ -4,7 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Products } from "@/components/sections/Products";
 import { ProductShowcase } from "@/components/sections/ProductShowcase";
 import { FeatureCard } from "@/components/sections/FeatureCard";
-import { DemoRequestForm } from "@/components/sections/DemoRequestForm";
+import { ContactForm } from "@/components/sections/ContactForm";
 import { GeoDecorations } from "@/components/ui/GeoDecorations";
 
 export default function Home() {
@@ -190,9 +190,10 @@ export default function Home() {
                 Ready to scale impact?
               </h2>
               <p className="text-lg text-muted-foreground mb-10 md:text-xl">
-                Request a demo to learn what Shamba can mean for your organization.
+                Leave your email and we&apos;ll get back to you with more on
+                what Shamba can mean for your organization.
               </p>
-              <DemoRequestForm />
+              <ContactForm />
             </div>
           </div>
         </section>

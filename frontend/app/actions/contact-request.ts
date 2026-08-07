@@ -3,7 +3,7 @@
 import { z } from "zod";
 import { Resend } from "resend";
 import { Client as HubSpotClient } from "@hubspot/api-client";
-import { WaitlistConfirmation } from "@/emails/WaitlistConfirmation";
+import { ContactConfirmation } from "@/emails/ContactConfirmation";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -13,28 +13,30 @@ const hubspot = process.env.HUBSPOT_ACCESS_TOKEN
   ? new HubSpotClient({ accessToken: process.env.HUBSPOT_ACCESS_TOKEN })
   : null;
 
-const demoRequestSchema = z.object({
+const contactRequestSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
 });
 
-export type DemoRequestState = {
+export type ContactRequestState = {
   success: boolean;
   message: string;
 } | null;
 
 const SUCCESS_MESSAGE = "Thanks, we'll be in touch shortly.";
 
-export async function requestDemo(
-  _prevState: DemoRequestState,
+export async function submitContactRequest(
+  _prevState: ContactRequestState,
   formData: FormData,
-): Promise<DemoRequestState> {
+): Promise<ContactRequestState> {
   // Honeypot: a hidden field humans never see. If it is filled, a bot sent
   // the form. Return a fake success so the bot learns nothing.
   if (((formData.get("company") as string | null) ?? "").trim() !== "") {
     return { success: true, message: SUCCESS_MESSAGE };
   }
 
-  const parsed = demoRequestSchema.safeParse({ email: formData.get("email") });
+  const parsed = contactRequestSchema.safeParse({
+    email: formData.get("email"),
+  });
   if (!parsed.success) {
     return { success: false, message: parsed.error.issues[0].message };
   }
@@ -47,8 +49,8 @@ export async function requestDemo(
       audienceId: process.env.RESEND_AUDIENCE_ID!,
     });
 
-    // Mirror to HubSpot CRM and drop an actionable follow-up task so a demo
-    // request lands in the CRM queue, not only in email. Best-effort.
+    // Mirror to HubSpot CRM and drop an actionable follow-up task so an
+    // inquiry lands in the CRM queue, not only in email. Best-effort.
     if (hubspot) {
       try {
         await hubspot.crm.contacts.basicApi.create({
@@ -58,8 +60,8 @@ export async function requestDemo(
 
         await hubspot.crm.objects.tasks.basicApi.create({
           properties: {
-            hs_task_subject: `Demo request: ${email}`,
-            hs_task_body: `New demo request from shamba.com\nEmail: ${email}\nTime: ${new Date().toISOString()}`,
+            hs_task_subject: `Website inquiry: ${email}`,
+            hs_task_body: `New inquiry from shamba.com\nEmail: ${email}\nTime: ${new Date().toISOString()}`,
             hs_task_status: "NOT_STARTED",
             hs_task_priority: "HIGH",
             hs_timestamp: Date.now().toString(),
@@ -74,25 +76,25 @@ export async function requestDemo(
       }
     }
 
-    // Branded auto-reply to the requester.
+    // Branded auto-reply to the sender.
     await resend.emails.send({
       from: "Shamba <hello@shamba.com>",
       to: email,
-      subject: "Thanks for requesting a Shamba demo",
-      react: WaitlistConfirmation({ email }),
+      subject: "Thanks for reaching out to Shamba",
+      react: ContactConfirmation({ email }),
     });
 
     // Notify the team.
     await resend.emails.send({
-      from: "Demo requests <hello@shamba.com>",
+      from: "Website inquiries <hello@shamba.com>",
       to: "info@shamba.com",
-      subject: `New demo request: ${email}`,
-      text: `New demo request on shamba.com:\n\nEmail: ${email}\nTime: ${new Date().toISOString()}`,
+      subject: `New website inquiry: ${email}`,
+      text: `New inquiry on shamba.com:\n\nEmail: ${email}\nTime: ${new Date().toISOString()}`,
     });
 
     return { success: true, message: SUCCESS_MESSAGE };
   } catch (error) {
-    console.error("Demo request error:", error);
+    console.error("Contact request error:", error);
     return {
       success: false,
       message:
